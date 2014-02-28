@@ -1,3 +1,7 @@
 $(document).ready(function() {
-    $("#tide1").animate({marginLeft: "+=550px"}, 800);
+    $("button").click(function() {
+        $("#push").animate({
+            left: "250px"
+        }, fast);
+    });
 });
