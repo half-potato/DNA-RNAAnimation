@@ -6,23 +6,34 @@ clear {
     margin: auto;
 }
 
+div h1 {
+    font-family: sans-serif;
+    margin-top: 20;
+}
+
 div {
-	border-radius: 5px;
-	border: 2px solid #6495ED;
-	background-color: #BCD2EE;
-	margin: auto;
-	text-align: center;
+	background-color: inherit;
+    height: inherit;
+    width: inherit;
+    border: inherit;
+    border-width: inherit;
 }
 
 #header {
     height: 50px;
-    width: auto; 
+    width: auto;
+    background-color: lightblue;
+    border: 3px solid blue;
+    border-radius: 20px;
+    text-align: center;
 }
 
-div h1 {
-    font-family: sans-serif;
+#tide1 {
+    position: absolute;
+    top: 100px;
+    left: auto;
+    height: 30px;
+    width: 12px;
+    background-color: blue;
 }
 
-@-webkit-keyframe {
-    
-}
