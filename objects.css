@@ -12,7 +12,7 @@
     display: block;
 }
 /*ids for stuff*/
-#adenine {
+.adenine {
     background-color: lightblue;
     width: 50px;
     height: 100px;
@@ -22,7 +22,7 @@
     position: absolute;
     padding-top: auto;
 }
-#cytosine {
+.cytosine {
     background-color: lightgreen;
     width: 50px;
     height: 100px;
@@ -32,7 +32,7 @@
     position: absolute;
     padding-top: auto;
 }
-#guanine {
+.guanine {
     background: darkorange;
     width: 50px;
     height: 100px;
@@ -42,7 +42,7 @@
     position: absolute;
     padding-top: auto;
 }
-#thymine {
+.thymine {
     background: purple;
     width: 50px;
     height: 100px;

@@ -1,17 +1,5 @@
-var sense = [
-    {
-        n: "A"
-    },
-    {
-        n: "T"
-    },
-    {
-        n: "G"
-    },
-    {
-        n: "C"
-    }
-];
+
+var sense = [{n: "A"}, {n: "T"}, {n: "G"}, {n: "C"}];
 $(document).ready(function(){
     for (var i = 0; i < sense.length; i++) {
         switch(sense[i].n) {
@@ -33,6 +21,6 @@ $(document).ready(function(){
         }
     }
     $("button").click(function(){
-        $("#1").animate({top:'150px'});
+        $("#"+i).animate({top:"150px"});
     });
 });
