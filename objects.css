@@ -1,0 +1,39 @@
+
+.sense {
+    min-height: 100px;
+    max-height: auto;
+    position: absolute;
+}
+.antisense{
+    min-height: 100px;
+    max-height: auto;
+    position: absolute;
+}
+/*ids for stuff*/
+#adenine {
+    background-color: lightblue;
+    width: 50px;
+    height: 100px;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 32px;
+    position: absolute;
+    padding-top: auto;
+    
+}
+#cytosine {
+    background-color: ;
+    width: 50px;
+    height: 100px;
+}
+#guanine {
+    background: darkorange;
+    width: 50px;
+    height: 100px;
+}
+#tymine {
+    background: purple;
+    width: 50px;
+    height: 100px;
+}
+
