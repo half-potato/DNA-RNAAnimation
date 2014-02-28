@@ -3,11 +3,13 @@
     min-height: 100px;
     max-height: auto;
     position: absolute;
+    display: block;
 }
 .antisense{
     min-height: 100px;
     max-height: auto;
     position: absolute;
+    display: block;
 }
 /*ids for stuff*/
 #adenine {

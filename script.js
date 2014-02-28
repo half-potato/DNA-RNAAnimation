@@ -13,6 +13,6 @@
 $(document).ready(function(){
     
     $("button").click(function(){
-        $("adenine").animate({left:'250px'});
+        $(".sense").animate({top:'150px'});
     });
 });
