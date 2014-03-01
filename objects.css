@@ -4,6 +4,7 @@
     max-height: auto;
     position: absolute;
     display: block;
+    top: 150px;
 }
 .antisense{
     min-height: 100px;
