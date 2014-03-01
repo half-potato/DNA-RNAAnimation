@@ -1,11 +1,10 @@
 
-<<<<<<< HEAD
 var sense = [{n: "A"}, {n: "G"}, {n: "G"}, {n: "T"}, {n: "C"}, {n: "T"}, {n: "G"}, {n: "A"}, {n: "A"}, {n: "T"}, {n: "C"}];
 var animations = {step1: [{id: "#1", x: "+=0px", y: "+=15px"}], step2: [{id: "#2", x: "+=0px", y: "+=30px"}, {id: "#3", x: "+=0px", y: "+=30px"}]};
 
 function arrayAnimate(animations) {
     var step = animations.shift(), short = animations, object, directions;
-    if(animations.length == 0) {
+    if(animations.length;() == 0) {
         for (object in step) {
             console.log(object.id);
             $(object.id).animate(
@@ -21,10 +20,9 @@ function arrayAnimate(animations) {
     }
 }
 
-=======
 var sense = [{n: "A"}, {n: "T"}, {n: "G"}, {n: "C"}];
 var antisense = [{n: "A"}, {n: "T"}, {n: "G"}, {n: "C"}];
->>>>>>> FETCH_HEAD
+
 $(document).ready(function () {
     for (var i = 0; i < sense.length; i++) {
         switch(sense[i].n) {
@@ -45,7 +43,6 @@ $(document).ready(function () {
                 break;
         }
     }
-<<<<<<< HEAD
     
     $("button").click(function () {
         console.log("hi");
@@ -65,7 +62,6 @@ $(document).ready(function () {
                 });
             });
         });*/
-=======
     for (var i = 0; i < antisense.length; i++){
         switch(antisense[i].n){
             case "A":
@@ -93,6 +89,5 @@ $(document).ready(function () {
         for(var i = 0; i < antisense.length; i++){
             $(".antisense, #"+i).animate({top:"+150px"}, 500);
         }
->>>>>>> FETCH_HEAD
     });
 });
