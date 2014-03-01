@@ -1,7 +1,7 @@
 
 var     sense = [{n: "A"}, {n: "G"}, {n: "G"}, {n: "T"}, {n: "C"}, {n: "T"}, {n: "G"}, {n: "A"}, {n: "A"}, {n: "T"}, {n: "C"}];
 var antisense = [{n: "T"}, {n: "C"}, {n: "C"}, {n: "A"}, {n: "G"}, {n: "A"}, {n: "C"}, {n: "T"}, {n: "T"}, {n: "A"}, {n: "G"}];
-var animations = [[["#1", "+=0px", "-=15px"], ["#a1", "+=0px", "-=15px"]],
+var animations = [[["#1", "+=0px", "-=15px"]],
                   [["#2", "+=0px", "-=30px"]],
                   [["#3", "+=0px", "-=45px"]],
                   [["#4", "+=0px", "-=50px"]],
@@ -9,24 +9,20 @@ var animations = [[["#1", "+=0px", "-=15px"], ["#a1", "+=0px", "-=15px"]],
                   [["#6", "+=0px", "-=50px"]],
                   [["#7", "+=0px", "-=45px"]],
                   [["#8", "+=0px", "-=30px"]],
-                  [["#9", "+=0px", "-=15px"]]];
+                  [["#9", "+=0px", "-=15px"], ["#a1", "+=0px", "-=15px"]]];
 
 function arrayAnimate(animations) {
     var step, short = animations, object, directions, n;
 
     if (animations.length != 0) {
         step = animations.shift();
-        console.log(step);
         for (n = 0; n < step.length; n++) {
-            console.log(step[n]);
             if(n == step.length - 1) {
-                console.log("Hi");
                 $(step[n][0]).animate( {top: step[n][2], left: step[n][1]}, function() {
                   setTimeout(1);
                   arrayAnimate(animations)
                 });
             } else {
-                console.log("Hi");
                 $(step[n][0]).animate( {top: step[n][2], left: step[n][1]});
             }
         }
