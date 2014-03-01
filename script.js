@@ -1,6 +1,6 @@
 
 var sense = [{n: "A"}, {n: "T"}, {n: "G"}, {n: "C"}];
-$(document).ready(function(){
+$(document).ready(function () {
     for (var i = 0; i < sense.length; i++) {
         switch(sense[i].n) {
             case "A":
@@ -20,7 +20,7 @@ $(document).ready(function(){
                 break;
         }
     }
-    $("button").click(function(){
+    $("button").click(function() {
         $("#"+i).animate({top:"150px"});
     });
 });
