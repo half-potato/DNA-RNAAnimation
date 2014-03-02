@@ -36,7 +36,7 @@ function arrayAnimate(animations) {
 }
 
 $(document).ready(function () {
-    $("button").click(function () {
+    $("#button").click(function () {
         $("#container").append("<div class=\"sense\"></div>");
         $("#container").append("<div class=\"antisense\"></div>");
         $("#container").append("<div class = \"helicase\">Helicase</div>");
