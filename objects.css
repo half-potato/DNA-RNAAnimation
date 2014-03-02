@@ -71,9 +71,9 @@
     width: 300px;
     z-index: 10;
     opacity: .5;
-    top: 150px;
+    top: 250px;
+    left: -125px;
     -webkit-transform: rotate(90deg);
-    padding-bottom: 20px;
 }
 
 
