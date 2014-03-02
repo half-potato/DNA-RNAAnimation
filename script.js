@@ -36,7 +36,11 @@ function arrayAnimate(animations) {
 }
 
 $(document).ready(function () {
-    for (var i = 0; i < sense.length; i++) {
+    $("button").click(function () {
+        $("#container").append("<div class=\"sense\"></div>");
+        $("#container").append("<div class=\"antisense\"></div>");
+        $("#container").append("<div class = \"helicase\">Helicase</div>");
+        for (var i = 0; i < sense.length; i++) {
         switch(sense[i].n) {
             case "A":
                 $(".sense").append("<div id = '" + i + "' style ='left:"+ 50 * i + "px' class = \"adenine\">A</div>");
@@ -76,8 +80,6 @@ $(document).ready(function () {
         }
 
     }
-
-    $("button").click(function () {
         $(this).hide();
         arrayAnimate(animations);
     });
