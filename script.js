@@ -81,6 +81,7 @@ $(document).ready(function () {
 
     }
         $(this).hide();
+        $("#header").hide();
         arrayAnimate(animations);
     });
 });
