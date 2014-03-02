@@ -20,7 +20,7 @@ function arrayAnimate(animations) {
             if(n == step.length - 1) {
                 $(step[n][0]).animate( {top: step[n][2], left: step[n][1]}, function() {
                   setTimeout(1);
-                  arrayAnimate(animations)
+                  arrayAnimate(animations);
                 });
             } else {
                 $(step[n][0]).animate( {top: step[n][2], left: step[n][1]});
