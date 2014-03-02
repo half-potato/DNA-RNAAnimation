@@ -6,9 +6,8 @@
 #header {
     height: 50px;
     width: auto;
-    background-color: lightblue;
-    border: 3px solid blue;
-    border-radius: 20px;
+    border: 2px solid lightblue;
+    border-radius: 25px;
     text-align: center;
 }
 #button{
