@@ -62,7 +62,7 @@
 }
 
 .helicase {
-    position: absolute;
+    position: fixed;
     text-align: center;
     font-family: sans-serif;
     font-size: 32px;
@@ -75,5 +75,6 @@
 }
 #text {
      -webkit-transform: rotate(90deg);
+    padding-bottom: 20px;
 }
 
