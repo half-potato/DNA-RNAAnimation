@@ -5,9 +5,6 @@
 
 #header {
     height: 50px;
-    width: auto;
-    border: 2px solid lightblue;
-    border-radius: 25px;
     text-align: center;
 }
 #button{
