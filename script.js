@@ -1,15 +1,15 @@
 
 var     sense = [{n: "A"}, {n: "G"}, {n: "G"}, {n: "T"}, {n: "C"}, {n: "T"}, {n: "G"}, {n: "A"}, {n: "A"}, {n: "T"}, {n: "C"}];
 var antisense = [{n: "T"}, {n: "C"}, {n: "C"}, {n: "A"}, {n: "G"}, {n: "A"}, {n: "C"}, {n: "T"}, {n: "T"}, {n: "A"}, {n: "G"}];
-var animations = [[["#1", "+=0px", "-=15px"]],
-                  [["#2", "+=0px", "-=30px"]],
-                  [["#3", "+=0px", "-=45px"]],
-                  [["#4", "+=0px", "-=50px"]],
-                  [["#5", "+=0px", "-=50px"]],
-                  [["#6", "+=0px", "-=50px"]],
-                  [["#7", "+=0px", "-=45px"]],
-                  [["#8", "+=0px", "-=30px"]],
-                  [["#9", "+=0px", "-=15px"], ["#a1", "+=0px", "-=15px"]]];
+var animations = [[["#1", "+=0px", "-=15px"], ["#helicase", "+=50px", "+=0px"]],
+                  [["#2", "+=0px", "-=30px"], ["#helicase", "+=50px", "+=0px"]],
+                  [["#3", "+=0px", "-=45px"], ["#helicase", "+=50px", "+=0px"]],
+                  [["#4", "+=0px", "-=50px"], ["#helicase", "+=50px", "+=0px"]],
+                  [["#5", "+=0px", "-=50px"], ["#helicase", "+=50px", "+=0px"]],
+                  [["#6", "+=0px", "-=50px"], ["#helicase", "+=50px", "+=0px"]],
+                  [["#7", "+=0px", "-=45px"], ["#helicase", "+=50px", "+=0px"]],
+                  [["#8", "+=0px", "-=30px"], ["#helicase", "+=50px", "+=0px"]],
+                  [["#9", "+=0px", "-=15px"], ["#helicase", "+=50px", "+=0px"]]];
 
 function arrayAnimate(animations) {
     var step, short = animations, object, directions, n;
