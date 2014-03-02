@@ -1,13 +1,9 @@
 
 .sense {
-    min-height: 100px;
-    position: fixed;
-    top: 150px;
+    position: absolute;
 }
 .antisense{
-    min-height: 100px;
-    position: fixed;
-    /*top: 250px;*/
+    position: absolute;
 }
 /*dna nucleotides for stuff*/
 .adenine {
