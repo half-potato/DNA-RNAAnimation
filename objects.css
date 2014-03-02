@@ -9,7 +9,7 @@
     position: fixed;
     /*top: 250px;*/
 }
-/*ids for stuff*/
+/*dna nucleotides for stuff*/
 .adenine {
     background-color: lightblue;
     width: 50px;
@@ -61,8 +61,8 @@
     width: 50px;
 }
 
-#helicase {
-    position: fixed;
+.helicase {
+    position: absolute;
     text-align: center;
     font-family: sans-serif;
     font-size: 32px;
@@ -70,6 +70,10 @@
     height: 300px;
     width: 50px;
     opacity: .5;
-	z-index: 2;
+	z-index: 10;
     top: 150px;
 }
+#text {
+     -webkit-transform: rotate(90deg);
+}
+
