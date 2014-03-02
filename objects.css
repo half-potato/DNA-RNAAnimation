@@ -2,13 +2,11 @@
 .sense {
     min-height: 100px;
     position: fixed;
-    display: block;
     top: 150px;
 }
 .antisense{
     min-height: 100px;
     position: fixed;
-    display: block;
     /*top: 250px;*/
 }
 /*ids for stuff*/
