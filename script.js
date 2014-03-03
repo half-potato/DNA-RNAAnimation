@@ -30,7 +30,7 @@ var animations = [[[".helicase", "+=50px", "+=0px"]],
                   [["#9", "+=0px", "-=15px"], ["#a9", "+=0px", "+=15px"]],
                   [[".helicase", "+=50px", "+=0px"]],
                   [[".helicase", "+=0", "+=0", "hide"], [".polymerase", "+=0", "+=0", "unhide"]], 
-                  [[".polymerase", "+=74px", "+=0px"]],
+                  [[".polymerase", "+=74px", "+=0px"], [".aminoacids", "+=0", "+=0", "unhide"]],
                   //[[".polymerase", "+=50px", "+=0px"]],
                   //[[".polymerase", "+=50px", "+=0px"]],
                   //[[".polymerase", "+=50px", "+=0px"]],
@@ -75,6 +75,8 @@ $(document).ready(function () {
         $("#container").append("<div class=\"antisense\"></div>");
         $("#container").append("<div class = \"helicase\">Helicase</div>");
         $("#container").append("<div class = \"polymerase\">Polymerase</div>");
+        $("#container").append("<div class = \"aminoacids\"></div>");
+        
         for (var i = 0; i < sense.length; i++) {
             switch(sense[i].n) {
                 case "A":
@@ -115,25 +117,27 @@ $(document).ready(function () {
             }
         }
         
-        for (var i = 0; i < antisense.length; i++){
-            switch(antisense[i].n){
+        for (var i = 0; i < sense.length; i++){
+            switch(sense[i].n){
                 case "A":
-                    $(".aminoacids").append("<div id = 'a" + i + "' style ='left:"+ 50 * i + "px; top: 160px;' class = \"adenine\">A</div>");
+                    $(".aminoacids").append("<div id = 'r" + i + "' style ='left:"+ 50 * i + "px; top: 160px;' class = \"adenine\">A</div>");
                     break;
                 case "T":
-                    $(".aminoacids").append("<div id = 'a" + i + "' style ='left:"+ 50 * i + "px; top: 160px;' class = \"thymine\">T</div>");
+                    $(".aminoacids").append("<div id = 'r" + i + "' style ='left:"+ 50 * i + "px; top: 160px;' class = \"uracil\">U</div>");
                     break;
                 case "G":
-                    $(".aminoacids").append("<div id = 'a" + i + "' style ='left:"+ 50 * i + "px; top: 160px;' class = \"guanine\">G</div>");
+                    $(".aminoacids").append("<div id = 'r" + i + "' style ='left:"+ 50 * i + "px; top: 160px;' class = \"guanine\">G</div>");
                     break;
                 case "C":
-                    $(".aminoacids").append("<div id = 'a" + i + "' style ='left:"+ 50 * i + "px; top: 160px;' class = \"cytosine\">C</div>");
+                    $(".aminoacids").append("<div id = 'r" + i + "' style ='left:"+ 50 * i + "px; top: 160px;' class = \"cytosine\">C</div>");
                     break;
                 case "U":
-                    $(".aminoacids").append("<div id = 'a" + i + "' style ='left:"+ 50 * i + "px; top: 160px;' class = \"adenine\">A</div>");
+                    $(".aminoacids").append("<div id = 'r" + i + "' style ='left:"+ 50 * i + "px; top: 160px;' class = \"adenine\">A</div>");
                     break;
             }
         }
+        
+        $(".aminoacids").hide();
         
         $(this).hide(.1);
         $("#header").hide(.1);
