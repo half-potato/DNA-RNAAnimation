@@ -29,7 +29,12 @@ var animations = [[[".helicase", "+=50px", "+=0px"]],
                   [[".helicase", "+=50px", "+=0px"]],
                   [["#9", "+=0px", "-=15px"], ["#a9", "+=0px", "+=15px"]],
                   [[".helicase", "+=50px", "+=0px"]],
-                  [[".helicase", "+=0", "+=0", "hide"], [".polymerase", "+=0", "+=0", "unhide"]]];
+                  [[".helicase", "+=0", "+=0", "hide"], [".polymerase", "+=0", "+=0", "unhide"]], 
+                  [[".polymerase", "+=74px", "+=0px"]],
+                  //[[".polymerase", "+=50px", "+=0px"]],
+                  //[[".polymerase", "+=50px", "+=0px"]],
+                  //[[".polymerase", "+=50px", "+=0px"]],
+                  ];
         
 
 function arrayAnimate(animations) {
@@ -40,41 +45,25 @@ function arrayAnimate(animations) {
         for (n = 0; n < step.length; n += 1) {
             if (n === step.length - 1) {
                 if (step[n][3] === "hide"){
+                    $(step[n][0]).hide(250);
+                    arrayAnimate(animations);
+                } else if(step[n][3] === "unhide") {
+                    $(step[n][0]).show(250);
+                    arrayAnimate(animations);
+                } else {
+                    $(step[n][0]).animate( {top: step[n][2], left: step[n][1]}, 250, function() {
+                        setTimeout(1);
+                        arrayAnimate(animations);
+                    });
+                }
+            } else {
+                if (step[n][3] === "hide"){
                     $(step[n][0]).hide(2500);
                 } else if(step[n][3] === "unhide") {
                     $(step[n][0]).show(2500);
                 } else {
-                    $(step[n][0]).animate( {top: step[n][2], left: step[n][1]}, function() {
-                        setTimeout(1);
-                        arrayAnimate(animations);
-                    });
+                    $(step[n][0]).animate({top: step[n][2], left: step[n][1]}, 250);
                 }
-            } else {
-                $(step[n][0]).animate({top: step[n][2], left: step[n][1]},1000);
-            }
-        }
-    }
-}
-
-function arrayAnimate(animations) {
-    var step, short = animations, n;
-
-    if (animations.length != 0) {
-        step = animations.shift();
-        for (n = 0; n < step.length; n++) {
-            if(n == step.length - 1) {
-                if (step[n][3] ==="hide"){
-                    $(step[n][0]).hide(2500);
-                    arrayAnimate(animations);
-                }
-                else{
-                    $(step[n][0]).animate( {top: step[n][2], left: step[n][1]}, function() {
-                        setTimeout(1);
-                        arrayAnimate(animations);
-                    });
-                }
-            } else {
-                $(step[n][0]).animate( {top: step[n][2], left: step[n][1]});
             }
         }
     }
@@ -85,6 +74,7 @@ $(document).ready(function () {
         $("#container").append("<div class=\"sense\"></div>");
         $("#container").append("<div class=\"antisense\"></div>");
         $("#container").append("<div class = \"helicase\">Helicase</div>");
+        $("#container").append("<div class = \"polymerase\">Polymerase</div>");
         for (var i = 0; i < sense.length; i++) {
         switch(sense[i].n) {
             case "A":
