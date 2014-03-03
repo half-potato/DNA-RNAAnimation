@@ -1,4 +1,4 @@
-var sense = [{n: "G"}, {n: "C"}, {n: "T"}, {n: "A"}, {n: "G"}, {n: "T"}, {n: "T"},{n: "A"},{n: "C"},{n: "G"},{n: "A"},{n: "A"},{n: "T"},{n: "G"},{n: "A"},{n: "C"},{n: "C"},{n: "C"},{n: "A"},{n: "C"},{n: "C"},{n: "A"},{n: "C"},{n: "T"}];
+var sense = [{n: "G"}, {n: "C"}, {n: "T"}, {n: "A"}, {n: "G"}, {n: "T"}, {n: "T"},{n: "A"},{n: "C"},{n: "G"},{n: "A"},{n: "A"},{n: "T"},{n: "G"},{n: "A"},{n: "A"},{n: "C"},{n: "T"},{n: "C"},{n: "G"},{n: "C"},{n: "A"},{n: "G"},{n: "T"}];
 /*var animations = [[["#1", "+=0px", "-=15px"], ["#helicase", "+=50px", "+=0px"]],
                   [["#2", "+=0px", "-=30px"], ["#helicase", "+=50px", "+=0px"]],
                   [["#3", "+=0px", "-=45px"], ["#helicase", "+=50px", "+=0px"]],
@@ -57,30 +57,31 @@ var animations = [[[".helicase", "+=50px", "+=0px"]],
                   [["#23", "+=0px", "-=0px"], ["#a23", "+=0px", "+=0px"]],
                   [[".helicase", "+=0", "+=0", "hide"], [".polymerase", "+=315px", "+=0px"]], 
                   [[".polymerase", "+=0", "+=0", "unhide"], [".aminoacids", "+=0", "+=0", "unhide"]],
-                  [["#r1", "+=0px", "-=450px"]],
                   [[".polymerase", "+=50px", "+=0px"]],
-                  [["#r2", "+=0px", "-=450px"]],
+                  [["#r1", "+=0px", "-=400px"]],
                   [[".polymerase", "+=50px", "+=0px"]],
-                  [["#r3", "+=0px", "-=450px"]],
+                  [["#r2", "+=0px", "-=400px"]],
                   [[".polymerase", "+=50px", "+=0px"]],
-                  [["#r4", "+=0px", "-=450px"]],
+                  [["#r3", "+=0px", "-=400px"]],
                   [[".polymerase", "+=50px", "+=0px"]],
-                  [["#r5", "+=0px", "-=450px"]],
+                  [["#r4", "+=0px", "-=400px"]],
                   [[".polymerase", "+=50px", "+=0px"]],
-                  [["#r6", "+=0px", "-=450px"]],
+                  [["#r5", "+=0px", "-=400px"]],
                   [[".polymerase", "+=50px", "+=0px"]],
-                  [["#r7", "+=0px", "-=450px"]],
+                  [["#r6", "+=0px", "-=400px"]],
                   [[".polymerase", "+=50px", "+=0px"]],
-                  [["#r8", "+=0px", "-=450px"]],
+                  [["#r7", "+=0px", "-=400px"]],
                   [[".polymerase", "+=50px", "+=0px"]],
-                  [["#r9", "+=0px", "-=450px"]],
+                  [["#r8", "+=0px", "-=400px"]],
                   [[".polymerase", "+=50px", "+=0px"]],
-                  [["#r10", "+=0px", "-=450px"]],
+                  [["#r9", "+=0px", "-=400px"]],
                   [[".polymerase", "+=50px", "+=0px"]],
-                  [["#r11", "+=0px", "-=450px"]],
+                  [["#r10", "+=0px", "-=400px"]],
                   [[".polymerase", "+=50px", "+=0px"]],
-                  //[[".polymerase", "+=50px", "+=0px"]],
-                  //[[".polymerase", "+=50px", "+=0px"]],
+                  [["#r11", "+=0px", "-=400px"]],
+                  [[".polymerase", "+=50px", "+=0px"]],
+                  [["#r12", "+=0px", "-=400px"]],
+                  [[".polymerase", "+=0px", "+=0px", "hide"], [".antisense", "+=0px", "+=0px", "hide"], [".sense", "+=0px", "+=0px", "hide"]],
                   ];
         
 
@@ -158,7 +159,7 @@ $(document).ready(function () {
             }
         }
         
-        for (var i = 5; i < sense.length; i++){
+        for (var i = 6; i < sense.length - 6; i++){
             n = i - 5;
             switch(sense[i].n){
                 case "T":
