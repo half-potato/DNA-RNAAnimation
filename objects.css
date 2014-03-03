@@ -1,9 +1,9 @@
 
 .sense {
-    position: absolute;
+    position: fixed;
 }
 .antisense{
-    position: absolute;
+    position: fixed;
 }
 /*dna nucleotides for stuff*/
 .adenine {

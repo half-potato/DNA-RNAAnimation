@@ -87,11 +87,10 @@ $(document).ready(function () {
                 $(".antisense").append("<div id = a'" + i + "' style ='left:"+ 50 * i + "px; top: 160px;' class = \"adenine\">A</div>");
                 break;
         }
-
     }
         $(this).hide();
         $("#header").hide();
         arrayAnimate(animations);
-        $(".sense").animate({top:"+=500px"}, 100);
+        $(".antisense").animate({top:"-=5000px"}, 1000);
     });
 });
