@@ -20,7 +20,8 @@ var animations = [[["#1", "+=0px", "-=15px"]],
                   [["#8", "+=0px", "-=30px"]],
                   [["#9", "+=0px", "-=15px"]],
                   [[".helicase", "+=500px","+=0px"]],
-                  [[".sense", "+=0", "+=0", "hide"]]];
+                  [[".sense", "+=0", "+=0", "hide"]],
+                 ];
 
 function arrayAnimate(animations) {
     var step, short = animations, n;
@@ -30,13 +31,13 @@ function arrayAnimate(animations) {
         for (n = 0; n < step.length; n += 1) {
             if (n === step.length - 1) {
                 if (step[n][3] ==="hide"){
-                    $(step[n][0]).hide("slow");
+                    $(step[n][0]).hide(2500);
                 }
                 else{
-                $(step[n][0]).animate({top: step[n][2], left: step[n][1]}, arrayAnimate(animations));
+                $(step[n][0]).animate({top: step[n][2], left: step[n][1]},1000, arrayAnimate(animations));
                 }
             } else {
-                $(step[n][0]).animate({top: step[n][2], left: step[n][1]});
+                $(step[n][0]).animate({top: step[n][2], left: step[n][1]},1000);
             }
         }
     }
