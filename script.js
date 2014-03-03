@@ -19,9 +19,10 @@ var animations = [[["#1", "+=0px", "-=15px"]],
                   [["#7", "+=0px", "-=45px"]],
                   [["#8", "+=0px", "-=30px"]],
                   [["#9", "+=0px", "-=15px"]],
-                  [[".helicase", "+=500px","+=0px"]],
+                  [[".helicase", "+=500px", "+=0px"]],
                   [[".sense", "+=0", "+=0", "hide"]],
-                 ];
+                  [[".helicase", "+=0", "+=0", "hide"]]];
+        
 
 function arrayAnimate(animations) {
     var step, short = animations, n;
@@ -91,5 +92,6 @@ $(document).ready(function () {
         $(this).hide();
         $("#header").hide();
         arrayAnimate(animations);
+        $(".sense").animate({top:"+=500px"}, 100);
     });
 });

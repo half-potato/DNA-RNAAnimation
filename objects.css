@@ -67,7 +67,7 @@
     width: 300px;
     z-index: 10;
     opacity: .5;
-    top: 250px;
+    top: 100px;
     left: -125px;
     -webkit-transform: rotate(90deg);
 }
