@@ -45,10 +45,10 @@ function arrayAnimate(animations) {
         for (n = 0; n < step.length; n += 1) {
             if (n === step.length - 1) {
                 if (step[n][3] === "hide"){
-                    $(step[n][0]).hide(250);
+                    $(step[n][0]).hide(.1);
                     arrayAnimate(animations);
                 } else if(step[n][3] === "unhide") {
-                    $(step[n][0]).show(250);
+                    $(step[n][0]).show(.1);
                     arrayAnimate(animations);
                 } else {
                     $(step[n][0]).animate( {top: step[n][2], left: step[n][1]}, 250, function() {
@@ -76,46 +76,67 @@ $(document).ready(function () {
         $("#container").append("<div class = \"helicase\">Helicase</div>");
         $("#container").append("<div class = \"polymerase\">Polymerase</div>");
         for (var i = 0; i < sense.length; i++) {
-        switch(sense[i].n) {
-            case "A":
-                $(".sense").append("<div id = '" + i + "' style ='left:"+ 50 * i + "px' class = \"adenine\">A</div>");
-                break;
-            case "T":
-                $(".sense").append("<div id = '" + i + "' style ='left:"+ 50 * i + "px' class = \"thymine\">T</div>");
-                break;
-            case "G":
-                $(".sense").append("<div id = '" + i + "' style ='left:"+ 50 * i + "px' class = \"guanine\">G</div>");
-                break;
-            case "C":
-                $(".sense").append("<div id = '" + i + "' style ='left:"+ 50 * i + "px' class = \"cytosine\">C</div>");
-                break;
-            case "U":
-                $(".sense").append("<div id = '" + i + "' style ='left:"+ 50 * i + "px' class = \"adenine\">A</div>");
-                break;
-        }
-    }
+            switch(sense[i].n) {
+                case "A":
+                    $(".sense").append("<div id = '" + i + "' style ='left:"+ 50 * i + "px' class = \"adenine\">A</div>");
+                    break;
+                case "T":
+                    $(".sense").append("<div id = '" + i + "' style ='left:"+ 50 * i + "px' class = \"thymine\">T</div>");
+                    break;
+                case "G":
+                    $(".sense").append("<div id = '" + i + "' style ='left:"+ 50 * i + "px' class = \"guanine\">G</div>");
+                    break;
+                case "C":
+                    $(".sense").append("<div id = '" + i + "' style ='left:"+ 50 * i + "px' class = \"cytosine\">C</div>");
+                    break;
+                case "U":
+                    $(".sense").append("<div id = '" + i + "' style ='left:"+ 50 * i + "px' class = \"adenine\">A</div>");
+                    break;
+            }
+        }   
 
-    for (var i = 0; i < antisense.length; i++){
-        switch(antisense[i].n){
-            case "A":
-                $(".antisense").append("<div id = 'a" + i + "' style ='left:"+ 50 * i + "px; top: 160px;' class = \"adenine\">A</div>");
-                break;
-            case "T":
-                $(".antisense").append("<div id = 'a" + i + "' style ='left:"+ 50 * i + "px; top: 160px;' class = \"thymine\">T</div>");
-                break;
-            case "G":
-                $(".antisense").append("<div id = 'a" + i + "' style ='left:"+ 50 * i + "px; top: 160px;' class = \"guanine\">G</div>");
-                break;
-            case "C":
-                $(".antisense").append("<div id = 'a" + i + "' style ='left:"+ 50 * i + "px; top: 160px;' class = \"cytosine\">C</div>");
-                break;
-            case "U":
-                $(".antisense").append("<div id = 'a" + i + "' style ='left:"+ 50 * i + "px; top: 160px;' class = \"adenine\">A</div>");
-                break;
+        for (var i = 0; i < antisense.length; i++){
+            switch(antisense[i].n){
+                case "A":
+                    $(".antisense").append("<div id = 'a" + i + "' style ='left:"+ 50 * i + "px; top: 160px;' class = \"adenine\">A</div>");
+                    break;
+                case "T":
+                    $(".antisense").append("<div id = 'a" + i + "' style ='left:"+ 50 * i + "px; top: 160px;' class = \"thymine\">T</div>");
+                    break;
+                case "G":
+                    $(".antisense").append("<div id = 'a" + i + "' style ='left:"+ 50 * i + "px; top: 160px;' class = \"guanine\">G</div>");
+                    break;
+                case "C":
+                    $(".antisense").append("<div id = 'a" + i + "' style ='left:"+ 50 * i + "px; top: 160px;' class = \"cytosine\">C</div>");
+                    break;
+                case "U":
+                    $(".antisense").append("<div id = 'a" + i + "' style ='left:"+ 50 * i + "px; top: 160px;' class = \"adenine\">A</div>");
+                    break;
+            }
         }
-    }
-        $(this).hide();
-        $("#header").hide();
+        
+        for (var i = 0; i < antisense.length; i++){
+            switch(antisense[i].n){
+                case "A":
+                    $(".aminoacids").append("<div id = 'a" + i + "' style ='left:"+ 50 * i + "px; top: 160px;' class = \"adenine\">A</div>");
+                    break;
+                case "T":
+                    $(".aminoacids").append("<div id = 'a" + i + "' style ='left:"+ 50 * i + "px; top: 160px;' class = \"thymine\">T</div>");
+                    break;
+                case "G":
+                    $(".aminoacids").append("<div id = 'a" + i + "' style ='left:"+ 50 * i + "px; top: 160px;' class = \"guanine\">G</div>");
+                    break;
+                case "C":
+                    $(".aminoacids").append("<div id = 'a" + i + "' style ='left:"+ 50 * i + "px; top: 160px;' class = \"cytosine\">C</div>");
+                    break;
+                case "U":
+                    $(".aminoacids").append("<div id = 'a" + i + "' style ='left:"+ 50 * i + "px; top: 160px;' class = \"adenine\">A</div>");
+                    break;
+            }
+        }
+        
+        $(this).hide(.1);
+        $("#header").hide(.1);
         arrayAnimate(animations);
         $(".antisense").animate({top:"-=5000px"}, 1000);
     });

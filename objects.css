@@ -5,6 +5,10 @@
 .antisense{
     position: fixed;
 }
+.aminoacids {
+    border: solid 2px darkblue;
+    position: fixed;
+}
 /*dna nucleotides for stuff*/
 .adenine {
     background-color: lightblue;
