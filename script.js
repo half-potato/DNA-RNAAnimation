@@ -45,10 +45,10 @@ function arrayAnimate(animations) {
         for (n = 0; n < step.length; n += 1) {
             if (n === step.length - 1) {
                 if (step[n][3] === "hide"){
-                    $(step[n][0]).hide(.1);
+                    $(step[n][0]).hide("fast");
                     arrayAnimate(animations);
                 } else if(step[n][3] === "unhide") {
-                    $(step[n][0]).show(.1);
+                    $(step[n][0]).show("fast");
                     arrayAnimate(animations);
                 } else {
                     $(step[n][0]).animate( {top: step[n][2], left: step[n][1]}, 250, function() {
@@ -58,9 +58,9 @@ function arrayAnimate(animations) {
                 }
             } else {
                 if (step[n][3] === "hide"){
-                    $(step[n][0]).hide(2500);
+                    $(step[n][0]).hide("fast");
                 } else if(step[n][3] === "unhide") {
-                    $(step[n][0]).show(2500);
+                    $(step[n][0]).show("fast");
                 } else {
                     $(step[n][0]).animate({top: step[n][2], left: step[n][1]}, 250);
                 }
@@ -131,8 +131,8 @@ $(document).ready(function () {
         
         $(".aminoacids").hide();
         
-        $(this).hide(.1);
-        $("#header").hide(.1);
+        $(this).fadeOut();
+        $("#header").fadeOut();
         arrayAnimate(animations);
         $(".antisense").animate({top:"-=5000px"}, 1000);
     });
