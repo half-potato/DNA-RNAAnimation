@@ -58,9 +58,11 @@
 }
 .nucleicwalltop {
     width: 100px;
+    height: 500px;
 }
 .nucleicwallbottom {
     width: 100px;
+    height: 1000px;
 }
 .tRNA {
     width:50px;
