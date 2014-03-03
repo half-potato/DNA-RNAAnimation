@@ -57,7 +57,27 @@ var animations = [[[".helicase", "+=50px", "+=0px"]],
                   [["#23", "+=0px", "-=0px"], ["#a23", "+=0px", "+=0px"]],
                   [[".helicase", "+=0", "+=0", "hide"], [".polymerase", "+=315px", "+=0px"]], 
                   [[".polymerase", "+=0", "+=0", "unhide"], [".aminoacids", "+=0", "+=0", "unhide"]],
-                  [["#r1", "+=0px", "15px"]],
+                  [["#r1", "+=0px", "-=450px"]],
+                  [[".polymerase", "+=50px", "+=0px"]],
+                  [["#r2", "+=0px", "-=450px"]],
+                  [[".polymerase", "+=50px", "+=0px"]],
+                  [["#r3", "+=0px", "-=450px"]],
+                  [[".polymerase", "+=50px", "+=0px"]],
+                  [["#r4", "+=0px", "-=450px"]],
+                  [[".polymerase", "+=50px", "+=0px"]],
+                  [["#r5", "+=0px", "-=450px"]],
+                  [[".polymerase", "+=50px", "+=0px"]],
+                  [["#r6", "+=0px", "-=450px"]],
+                  [[".polymerase", "+=50px", "+=0px"]],
+                  [["#r7", "+=0px", "-=450px"]],
+                  [[".polymerase", "+=50px", "+=0px"]],
+                  [["#r8", "+=0px", "-=450px"]],
+                  [[".polymerase", "+=50px", "+=0px"]],
+                  [["#r9", "+=0px", "-=450px"]],
+                  [[".polymerase", "+=50px", "+=0px"]],
+                  [["#r10", "+=0px", "-=450px"]],
+                  [[".polymerase", "+=50px", "+=0px"]],
+                  [["#r11", "+=0px", "-=450px"]],
                   [[".polymerase", "+=50px", "+=0px"]],
                   //[[".polymerase", "+=50px", "+=0px"]],
                   //[[".polymerase", "+=50px", "+=0px"]],
@@ -78,7 +98,7 @@ function arrayAnimate(animations) {
                     $(step[n][0]).show("fast");
                     arrayAnimate(animations);
                 } else {
-                    $(step[n][0]).animate( {top: step[n][2], left: step[n][1]}, 250, function() {
+                    $(step[n][0]).animate( {top: step[n][2], left: step[n][1]}, "fast", function() {
                         setTimeout(1);
                         arrayAnimate(animations);
                     });
@@ -89,7 +109,7 @@ function arrayAnimate(animations) {
                 } else if(step[n][3] === "unhide") {
                     $(step[n][0]).show("fast");
                 } else {
-                    $(step[n][0]).animate({top: step[n][2], left: step[n][1]}, 250);
+                    $(step[n][0]).animate({top: step[n][2], left: step[n][1]}, "fast");
                 }
             }
         }
