@@ -9,6 +9,7 @@ var antisense = [{n: "T"}, {n: "C"}, {n: "C"}, {n: "A"}, {n: "G"}, {n: "A"}, {n:
                   [["#7", "+=0px", "-=45px"], ["#helicase", "+=50px", "+=0px"]],
                   [["#8", "+=0px", "-=30px"], ["#helicase", "+=50px", "+=0px"]],
                   [["#9", "+=0px", "-=15px"], ["#helicase", "+=50px", "+=0px"]]];*/
+                //<id/class> <x>     <y>
 var animations = [[["#1", "+=0px", "-=15px"]],
                   [["#2", "+=0px", "-=30px"]],
                   [["#3", "+=0px", "-=45px"]],
@@ -17,7 +18,9 @@ var animations = [[["#1", "+=0px", "-=15px"]],
                   [["#6", "+=0px", "-=50px"]],
                   [["#7", "+=0px", "-=45px"]],
                   [["#8", "+=0px", "-=30px"]],
-                  [["#9", "+=0px", "-=15px"]]];
+                  [["#9", "+=0px", "-=15px"]],
+                  [[".helicase", "+=500px","+=0px"]],
+                  [[".sense", "+=0", "+=0", "hide"]]];
 
 function arrayAnimate(animations) {
     var step, short = animations, n;
@@ -26,8 +29,12 @@ function arrayAnimate(animations) {
         step = animations.shift();
         for (n = 0; n < step.length; n += 1) {
             if (n === step.length - 1) {
-                //This animate's callback is not called
+                if (step[n][3] ==="hide"){
+                    $(step[n][0]).hide("slow");
+                }
+                else{
                 $(step[n][0]).animate({top: step[n][2], left: step[n][1]}, arrayAnimate(animations));
+                }
             } else {
                 $(step[n][0]).animate({top: step[n][2], left: step[n][1]});
             }
