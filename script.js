@@ -82,6 +82,7 @@ var animations = [[[".helicase", "+=50px", "+=0px"]],
                   [[".polymerase", "+=50px", "+=0px"]],
                   [["#r12", "+=0px", "-=400px"]],
                   [[".polymerase", "+=0px", "+=0px", "hide"], [".antisense", "+=0px", "+=0px", "hide"], [".sense", "+=0px", "+=0px", "hide"]],
+                  [[".aminoacids","+=0","+=1000px"]],
                   ];
         
 
@@ -123,7 +124,10 @@ $(document).ready(function () {
         $("#container").append("<div class=\"antisense\"></div>");
         $("#container").append("<div class = \"helicase\">Helicase</div>");
         $("#container").append("<div class = \"polymerase\">Polymerase</div>");
-        $("#container").append("<div class = \"aminoacids\"></div>");
+        $("#container").append("<div class = \"aminoacids\" style=\"top:500px\"></div>");
+        $("#container").append("<div class = \"nucleos\"></div>");
+        $(".nucleos").append("<div id=\"nucleicwalltop\"></div>");
+        $(".nucleos").append("<div id=\"nucleicwallbottom\"></div>");
         
         for (var i = 0; i < sense.length; i++) {
             switch(sense[i].n) {
@@ -178,7 +182,6 @@ $(document).ready(function () {
         }
         
         $(".aminoacids").hide();
-        
         $(this).fadeOut();
         $("#header").fadeOut();
         arrayAnimate(animations);
