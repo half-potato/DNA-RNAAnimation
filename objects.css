@@ -112,23 +112,35 @@
     height: 100px;
     width: 270px;
     background-color: brown;
+    position: fixed;
 }
 #Asite{
     width: 50px;
     padding-left: 10px;
     height: 75px;
+    position: fixed;
 }
 #Psite{
     width: 50px;
     padding-left: 10px;
     height: 75px;
+    position: fixed;
 }
 #Esite{
     width: 50px: 10px;
     height: 75px;
+    position: fixed;
 }
 .smallsubunit{
     height: 50px;
     width: 270px;
     background-color: brown;
+    position: fixed;
+}
+.tRNA{
+    height: 90px;
+    width: 150px;
+    background-color: lightgreen;
+    position: fixed;
+    
 }
