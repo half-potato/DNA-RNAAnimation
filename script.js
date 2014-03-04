@@ -73,8 +73,8 @@ var animations = [[[".helicase", "+=50px", "+=0px"]],
                   [[".polymerase", "+=50px", "+=0px"]],
                   [["#r12", "+=0px", "-=400px"]],
                   [[".polymerase", "+=0px", "+=0px", "hide"], [".antisense", "+=0px", "+=0px", "hide"], [".sense", "+=0px", "+=0px", "hide"]],
-                  [[".polymerase", "+=0px", "+=0px", "hide"], [".antisense", "+=0px", "+=0px", "hide"], [".sense", "+=0px", "+=0px", "hide"]],
-                  [[".aminoacids","+=0","+=1000px"]]];
+                  [[".polymerase", "+=0px", "+=0px", "hide"], [".antisense", "+=0px", "+=0px", "hide"], [".sense", "+=0px", "+=0px", "hide"], [".nucleos", "+=0", "+=0", "unhide"]],
+                  [[".aminoacids","+=1000", "+=0"]]];
         
 
 function arrayAnimate(animations) {
@@ -126,6 +126,8 @@ $(document).ready(function () {
         $(".ribosome").append("<div class = \"smallsubunit\"></div>");
         $(".nucleos").append("<div id=\"nucleicwalltop\"></div>");
         $(".nucleos").append("<div id=\"nucleicwallbottom\"></div>");
+        $(".nucleos").hide();
+        $(".ribosome").hide();
         
         
         for (var i = 0; i < sense.length; i++) {
