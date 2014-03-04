@@ -74,7 +74,8 @@ var animations = [[[".helicase", "+=50px", "+=0px"]],
                   [["#r12", "+=0px", "-=400px"]],
                   [[".polymerase", "+=0px", "+=0px", "hide"], [".antisense", "+=0px", "+=0px", "hide"], [".sense", "+=0px", "+=0px", "hide"]],
                   [[".polymerase", "+=0px", "+=0px", "hide"], [".antisense", "+=0px", "+=0px", "hide"], [".sense", "+=0px", "+=0px", "hide"], [".nucleos", "+=0", "+=0", "unhide"]],
-                  [[".aminoacids","+=1000", "+=0"]]];
+                  [[".aminoacids","+=1000", "+=0"]],
+                  [[".largesubunit", "+=0", "+=0", "unhide"], [".smallsubunit", "+=0", "+=0", "unhide"]]];
         
 
 function arrayAnimate(animations) {
