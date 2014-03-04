@@ -1,14 +1,5 @@
 var sense = [{n: "G"}, {n: "C"}, {n: "T"}, {n: "A"}, {n: "G"}, {n: "T"}, {n: "T"},{n: "A"},{n: "C"},{n: "G"},{n: "A"},{n: "A"},{n: "T"},{n: "G"},{n: "A"},{n: "A"},{n: "C"},{n: "T"},{n: "C"},{n: "G"},{n: "C"},{n: "A"},{n: "G"},{n: "T"}];
-/*var animations = [[["#1", "+=0px", "-=15px"], ["#helicase", "+=50px", "+=0px"]],
-                  [["#2", "+=0px", "-=30px"], ["#helicase", "+=50px", "+=0px"]],
-                  [["#3", "+=0px", "-=45px"], ["#helicase", "+=50px", "+=0px"]],
-                  [["#4", "+=0px", "-=50px"], ["#helicase", "+=50px", "+=0px"]],
-                  [["#5", "+=0px", "-=50px"], ["#helicase", "+=50px", "+=0px"]],
-                  [["#6", "+=0px", "-=50px"], ["#helicase", "+=50px", "+=0px"]],
-                  [["#7", "+=0px", "-=45px"], ["#helicase", "+=50px", "+=0px"]],
-                  [["#8", "+=0px", "-=30px"], ["#helicase", "+=50px", "+=0px"]],
-                  [["#9", "+=0px", "-=15px"], ["#helicase", "+=50px", "+=0px"]]];*/
-                //<id/class> <x>     <y>
+
 var animations = [[[".helicase", "+=50px", "+=0px"]],
                   [["#1", "+=0px", "-=15px"], ["#a1", "+=0px", "+=15px"]],
                   [[".helicase", "+=50px", "+=0px"]],
@@ -81,8 +72,7 @@ var animations = [[[".helicase", "+=50px", "+=0px"]],
                   [["#r11", "+=0px", "-=400px"]],
                   [[".polymerase", "+=50px", "+=0px"]],
                   [["#r12", "+=0px", "-=400px"]],
-                  [[".polymerase", "+=0px", "+=0px", "hide"], [".antisense", "+=0px", "+=0px", "hide"], [".sense", "+=0px", "+=0px", "hide"]],
-                  ];
+                  [[".polymerase", "+=0px", "+=0px", "hide"], [".antisense", "+=0px", "+=0px", "hide"], [".sense", "+=0px", "+=0px", "hide"]]];
         
 
 function arrayAnimate(animations) {
@@ -118,6 +108,7 @@ function arrayAnimate(animations) {
 }
 
 $(document).ready(function () {
+    $(".audio1").trigger("load");
     $("#button").click(function () {
         $("#container").append("<div class=\"sense\"></div>");
         $("#container").append("<div class=\"antisense\"></div>");
@@ -178,10 +169,9 @@ $(document).ready(function () {
         }
         
         $(".aminoacids").hide();
-        
         $(this).fadeOut();
         $("#header").fadeOut();
         arrayAnimate(animations);
-        $(".antisense").animate({top:"-=5000px"}, 1000);
+        $(".audio1").trigger('play');
     });
 });
