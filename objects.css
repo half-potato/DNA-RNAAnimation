@@ -109,3 +109,27 @@
     left: -125px;
     -webkit-transform: rotate(90deg);
 }
+.largesubunit{
+    height: 100px;
+    width: 270px;
+    background-color: brown;
+}
+#Asite{
+    width: 50px;
+    padding-left: 10px;
+    height: 75px;
+}
+#Psite{
+    width: 50px;
+    padding-left: 10px;
+    height: 75px;
+}
+#Esite{
+    width: 50px: 10px;
+    height: 75px;
+}
+.smallsubunit{
+    height: 50px;
+    width: 270px;
+    background-color: brown;
+}
