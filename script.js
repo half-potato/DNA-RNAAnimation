@@ -72,13 +72,10 @@ var animations = [[[".helicase", "+=50px", "+=0px"]],
                   [["#r11", "+=0px", "-=400px"]],
                   [[".polymerase", "+=50px", "+=0px"]],
                   [["#r12", "+=0px", "-=400px"]],
-<<<<<<< HEAD
                   [[".polymerase", "+=0px", "+=0px", "hide"], [".antisense", "+=0px", "+=0px", "hide"], [".sense", "+=0px", "+=0px", "hide"]]];
-=======
                   [[".polymerase", "+=0px", "+=0px", "hide"], [".antisense", "+=0px", "+=0px", "hide"], [".sense", "+=0px", "+=0px", "hide"]],
                   [[".aminoacids","+=0","+=1000px"]],
                   ];
->>>>>>> ea08e3bbcaae242dafd2e76381a35b0efb04acb4
         
 
 function arrayAnimate(animations) {
@@ -122,8 +119,15 @@ $(document).ready(function () {
         $("#container").append("<div class = \"polymerase\">Polymerase</div>");
         $("#container").append("<div class = \"aminoacids\" style=\"top:500px\"></div>");
         $("#container").append("<div class = \"nucleos\"></div>");
+        $("#container").append("<div class = \"ribosome\"></div>");
+        $(".ribosome").append("<div class = \"largesubunit\"></div>");
+        $(".largesubunit").append("<div class = \"Asite\"></div>");
+        $(".largesubunit").append("<div class = \"Psite\"></div>");
+        $(".largesubunit").append("<div class = \"Esite\"></div>");
+        $(".ribosome").append("<div class = \"smallsubunit\"></div>");
         $(".nucleos").append("<div id=\"nucleicwalltop\"></div>");
         $(".nucleos").append("<div id=\"nucleicwallbottom\"></div>");
+        
         
         for (var i = 0; i < sense.length; i++) {
             switch(sense[i].n) {
