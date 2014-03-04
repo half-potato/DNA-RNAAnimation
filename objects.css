@@ -7,7 +7,6 @@
 }
 .aminoacids {
     position: fixed;
-    top: 500px;
 }
 /*dna nucleotides for stuff*/
 .adenine {
@@ -55,19 +54,27 @@
     font-size: 32px;
     position: fixed;
 }
-.nucleicwalltop {
+#nucleicwalltop {
+    left: 1200px;
+    top: -100px;
     width: 100px;
-    height: 500px;
+    height: 200px;
+    position: fixed;
+    background: purple;
 }
-.nucleicwallbottom {
+#nucleicwallbottom {
+    left: 1200px;
+    top: 200px;
     width: 100px;
-    height: 1000px;
+    height: 700px;
+    position: fixed;
+    background: purple;
 }
 .tRNA {
     width:50px;
     height: 90px;
 }
-.AminoAcid{
+.AminoAcids{
     height: 10px;
     width: 50px;
 }
@@ -100,4 +107,28 @@
     top: 100px;
     left: -125px;
     -webkit-transform: rotate(90deg);
+}
+.largesubunit{
+    height: 100px;
+    width: 270px;
+    background-color: brown;
+}
+#Asite{
+    width: 50px;
+    padding-left: 10px;
+    height: 75px;
+}
+#Psite{
+    width: 50px;
+    padding-left: 10px;
+    height: 75px;
+}
+#Esite{
+    width: 50px: 10px;
+    height: 75px;
+}
+.smallsubunit{
+    height: 50px;
+    width: 270px;
+    background-color: brown;
 }
