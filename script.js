@@ -74,17 +74,11 @@ var animations = [[[".helicase", "+=50px", "+=0px"]],
                   [["#r12", "+=0px", "-=400px"]],
                   [[".polymerase", "+=0px", "+=0px", "hide"], [".antisense", "+=0px", "+=0px", "hide"], [".sense", "+=0px", "+=0px", "hide"]],
                   [[".polymerase", "+=0px", "+=0px", "hide"], [".antisense", "+=0px", "+=0px", "hide"], [".sense", "+=0px", "+=0px", "hide"], [".nucleos", "+=0", "+=0", "unhide"]],
-<<<<<<< HEAD
                   [["#r1","+=1500px", "+=0px"], ["#r2","+=1500px", "+=0px"], ["#r3","+=1500px", "+=0px"], ["#r4","+=1000px", "+=0px"], ["#r5","+=1000px", "+=0px"], ["#r6","+=1000px", "+=0px"], ["#r7","+=1000px", "+=0px"], ["#r8","+=1000px", "+=0px"], ["#r9","+=1000px", "+=0px"], ["#r10","+=1000px", "+=0px"], ["#r11","+=1000px", "+=0px"], ["#r12","+=1000px", "+=0px"]],
                   [[".nucleos", "+=0", "+=0", "hide"], [".aminoacids", "+=0", "+=0", "hide"]],
-                  ["delay"],
                   [["#r1","-=1700px", "+=0px"], ["#r2","-=1700px", "+=0px"], ["#r3","-=1700px", "+=0px"], ["#r4","-=1700px", "+=0px"], ["#r5","-=1000px", "+=0px"], ["#r6","-=1200px", "+=0px"], ["#r7","-=1200px", "+=0px"], ["#r8","-=1200px", "+=0px"], ["#r9","-=1200px", "+=0px"], ["#r10","-=1000px", "+=0px"], ["#r11","-=1200px", "+=0px"], ["#r12","-=1200px", "+=0px"]],
-                  ["delay"],
-                  [[".aminoacids", "+=0", "+=0", "unhide"]]];
-=======
-                  [[".aminoacids","+=1000", "+=0"]],
+                  [[".aminoacids", "+=0", "+=0", "unhide"]],
                   [[".largesubunit", "+=0", "+=0", "unhide"], [".smallsubunit", "+=0", "+=0", "unhide"]]];
->>>>>>> 2c513bcf0fbdcf31eb9019dcafe6ea5a132593bc
         
 
 function arrayAnimate(animations) {
@@ -98,28 +92,13 @@ function arrayAnimate(animations) {
                         $(step[n][0]).hide("fast");
                         arrayAnimate(animations);
                     } else if(step[n][3] === "unhide") {
-                        if(step[n][3] === "delay") {
-                            setTimeout(function () {
-                                $(step[n][0]).show("fast");
-                            }, 1000);
-                        } else {
-                            $(step[n][0]).show("fast");
-                        }
+                        $(step[n][0]).show("fast");
                         arrayAnimate(animations);
                     } else {
-                        if(step[n][3] === "delay") {
-                            setTimeout(function () {
-                                 $(step[n][0]).animate( {top: step[n][2], left: step[n][1]}, "fast", function() {
-                                    setTimeout(1);
-                                    arrayAnimate(animations);
-                                 });
-                            }, 1000);
-                        } else {
-                             $(step[n][0]).animate( {top: step[n][2], left: step[n][1]}, "fast", function() {
-                                setTimeout(1);
-                                arrayAnimate(animations);
-                             });
-                        }
+                        $(step[n][0]).animate( {top: step[n][2], left: step[n][1]}, "fast", function() {
+                            setTimeout(1);
+                            arrayAnimate(animations);
+                        });
                     }
                 } else {
                     if (step[n][3] === "hide"){
@@ -127,19 +106,10 @@ function arrayAnimate(animations) {
                     } else if(step[n][3] === "unhide") {
                         $(step[n][0]).show("fast");
                     } else {
-                        if(step[n][3] === "delay") {
-                            setTimeout(function () {
-                                 $(step[n][0]).animate( {top: step[n][2], left: step[n][1]}, "fast", function() {
-                                    setTimeout(1);
-                                    arrayAnimate(animations);
-                                 });
-                            }, 1000);
-                        } else {
-                             $(step[n][0]).animate( {top: step[n][2], left: step[n][1]}, "fast", function() {
-                                setTimeout(1);
-                                arrayAnimate(animations);
-                             });
-                        }
+                        $(step[n][0]).animate( {top: step[n][2], left: step[n][1]}, "fast", function() {
+                            setTimeout(1);
+                            arrayAnimate(animations);
+                        });
                     }
                 }
           }
