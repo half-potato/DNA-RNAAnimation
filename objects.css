@@ -71,8 +71,10 @@
     background: purple;
 }
 .tRNA {
+    position: fixed;
     width:50px;
     height: 90px;
+    background-color: limegreen;
 }
 .AminoAcids{
     height: 10px;
@@ -119,20 +121,28 @@
     width: 50px;
     padding-left: 10px;
     height: 75px;
-    color: crimson;
+    top: 10px;
+    left: 150px;
+    background-color: blue;
 }
 #Psite{
     position: fixed;
     width: 50px;
     padding-left: 10px;
     height: 75px;
-    color: crimson;
+    top: 10px;
+    left: 260px;
+    background-color: blue;
 }
 #Esite{
-    position: fixed;
-    width: 50px: 10px;
+    position: absolute;
+    width: 50px;
+    padding-left: 10px;
     height: 75px;
-    color: crimson;
+    top: -10px;
+    left: -80px;
+    background-color: blue;
+    
 }
 .smallsubunit{
     position: fixed;
