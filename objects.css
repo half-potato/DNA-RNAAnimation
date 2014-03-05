@@ -109,25 +109,30 @@
     -webkit-transform: rotate(90deg);
 }
 .largesubunit{
+    position: fixed;
     height: 100px;
     width: 270px;
     background-color: brown;
 }
 #Asite{
+    position: fixed;
     width: 50px;
     padding-left: 10px;
     height: 75px;
 }
 #Psite{
+    position: fixed;
     width: 50px;
     padding-left: 10px;
     height: 75px;
 }
 #Esite{
+    position: fixed;
     width: 50px: 10px;
     height: 75px;
 }
 .smallsubunit{
+    position: fixed;
     height: 50px;
     width: 270px;
     background-color: brown;
