@@ -169,6 +169,7 @@ $(document).ready(function () {
         $(".largesubunit").append("<div id = 'Asite'>A</div>");
         $(".largesubunit").append("<div id = 'Psite'>P</div>");
         $(".largesubunit").append("<div id = 'Esite'>E</div>");
+        $(".largesubunit").append("<div id = 'padding'></div>");
         $(".ribosome").append("<div class = \"smallsubunit\"></div>");
         $(".nucleos").append("<div id=\"nucleicwalltop\"></div>");
         $(".nucleos").append("<div id=\"nucleicwallbottom\"></div>");

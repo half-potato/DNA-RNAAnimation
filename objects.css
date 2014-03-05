@@ -116,23 +116,36 @@
 }
 #Asite{
     position: fixed;
-    width: 50px;
-    padding-left: 10px;
+    width: 150px;
+    padding-left: 325px;
     height: 75px;
-    color: crimson;
+    text-align: center;
+    font-family: sans-serif;
+    background-color: crimson;
 }
 #Psite{
     position: fixed;
-    width: 50px;
-    padding-left: 10px;
+    width: 150px;
+    padding-left: 175px;
     height: 75px;
-    color: crimson;
+    text-align: center;
+    font-family: sans-serif;
+    background-color: lightblue;
 }
 #Esite{
     position: fixed;
-    width: 50px;
+    width: 150px;
+    padding-left: 25px;
     height: 75px;
-    color: crimson;
+    text-align: center;
+    font-family: sans-serif;
+    background-color: green;
+}
+#padding {
+    position: fixed;
+    width: 25px;
+    height: 75px;
+    background-color: brown;
 }
 .smallsubunit{
     position: fixed;
