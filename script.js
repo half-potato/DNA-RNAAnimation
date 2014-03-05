@@ -104,7 +104,9 @@ var animations = [[[".helicase", "+=50px", "+=0px"]],
                   [["#r12", "+=0px", "-=10px"], ["#r11", "+=0px", "+=110px"]],
                   [["#r12", "+=0px", "+=110px"]],
                   [[".ribosome", "+=0", "+=0", "unhide"]],
-                  [[".smallsubunit", "+=0px", "+=300px"], ["#Psite", "+=0px", "+=100px"], ["#Asite", "+=0px", "+=100px"], ["#Esite", "+=0px", "+=100px"]]];
+                  [[".smallsubunit", "+=0px", "+=310px"], [".largesubunit", "+=0px", "+=90px"]],
+                  [[".smallsubunit", "+=275px", "+=0px"], [".largesubunit", "+=275px", "+=0px"]],
+                  [[".smallsubunit", "+=0px", "-=10px"], [".largesubunit", "+=0px", "+=10px"]]];
         
 
 function arrayAnimate(animations) 
@@ -164,9 +166,9 @@ $(document).ready(function () {
         $("#container").append("<div class = \"nucleos\"></div>");
         $("#container").append("<div class = \"ribosome\"></div>");
         $(".ribosome").append("<div class = \"largesubunit\"></div>");
-        $(".largesubunit").append("<div id = \"Asite\"></div>");
-        $(".largesubunit").append("<div id = \"Psite\"></div>");
-        $(".largesubunit").append("<div id = \"Esite\"></div>");
+        $(".largesubunit").append("<div id = 'Asite'>A</div>");
+        $(".largesubunit").append("<div id = 'Psite'>P</div>");
+        $(".largesubunit").append("<div id = 'Esite'>E</div>");
         $(".ribosome").append("<div class = \"smallsubunit\"></div>");
         $(".nucleos").append("<div id=\"nucleicwalltop\"></div>");
         $(".nucleos").append("<div id=\"nucleicwallbottom\"></div>");

@@ -111,7 +111,7 @@
 .largesubunit{
     position: fixed;
     height: 100px;
-    width: 270px;
+    width: 500px;
     background-color: brown;
 }
 #Asite{
@@ -130,13 +130,13 @@
 }
 #Esite{
     position: fixed;
-    width: 50px: 10px;
+    width: 50px;
     height: 75px;
     color: crimson;
 }
 .smallsubunit{
     position: fixed;
     height: 50px;
-    width: 270px;
+    width: 500px;
     background-color: brown;
 }
