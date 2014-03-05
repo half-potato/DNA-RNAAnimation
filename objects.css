@@ -113,22 +113,25 @@
 .largesubunit{
     position: fixed;
     height: 100px;
-    width: 270px;
+    width: 500px;
     background-color: brown;
 }
 #Asite{
     position: fixed;
-    width: 50px;
-    padding-left: 10px;
+    width: 150px;
+    padding-left: 325px;
     height: 75px;
     top: 10px;
     left: 150px;
     background-color: blue;
+    text-align: center;
+    font-family: sans-serif;
+    background-color: crimson;
 }
 #Psite{
     position: fixed;
-    width: 50px;
-    padding-left: 10px;
+    width: 150px;
+    padding-left: 175px;
     height: 75px;
     top: 10px;
     left: 260px;
@@ -142,11 +145,28 @@
     top: -10px;
     left: -80px;
     background-color: blue;
-    
+    text-align: center;
+    font-family: sans-serif;
+    background-color: lightblue;
+}
+#Esite{
+    position: fixed;
+    width: 150px;
+    padding-left: 25px;
+    height: 75px;
+    text-align: center;
+    font-family: sans-serif;
+    background-color: green;
+}
+#padding {
+    position: fixed;
+    width: 25px;
+    height: 75px;
+    background-color: brown;
 }
 .smallsubunit{
     position: fixed;
     height: 50px;
-    width: 270px;
+    width: 500px;
     background-color: brown;
 }
