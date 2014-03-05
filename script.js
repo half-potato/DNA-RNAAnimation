@@ -105,8 +105,13 @@ var animations = [[[".helicase", "+=50px", "+=0px"]],
                   [["#r12", "+=0px", "+=110px"]],
                   [[".ribosome", "+=0", "+=0", "unhide"]],
                   [[".smallsubunit", "+=0px", "+=310px"], [".largesubunit", "+=0px", "+=90px"]],
-                  [[".smallsubunit", "+=275px", "+=0px"], [".largesubunit", "+=275px", "+=0px"]],
-                  [[".smallsubunit", "+=0px", "-=10px"], [".largesubunit", "+=0px", "+=10px"]]];
+                  [[".smallsubunit", "+=125px", "+=0px"], [".largesubunit", "+=125px", "+=0px"]],
+                  [[".smallsubunit", "+=0px", "-=10px"], [".largesubunit", "+=0px", "+=10px"]],
+                  [["#r1", "-=150px", "-=0px"], ["#r2", "-=150px", "-=0px"], ["#r3", "-=150px", "-=0px"]],
+                  [["#r4", "-=150px", "-=0px"], ["#r5", "-=150px", "-=0px"], ["#r6", "-=150px", "-=0px"]],
+                  [["#r7", "-=150px", "-=0px"], ["#r8", "-=150px", "-=0px"], ["#r9", "-=150px", "-=0px"]],
+                  [["#r10", "-=150px", "-=0px"], ["#r11", "-=150px", "-=0px"], ["#r12", "-=150px", "-=0px"]],
+                  [".ribosome", "+=0", "+=0", "hide"], [".aminoacids", "+=0", "+=0", "hide"]];
         
 
 function arrayAnimate(animations) 
