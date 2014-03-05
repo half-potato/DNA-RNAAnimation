@@ -73,47 +73,84 @@ var animations = [[[".helicase", "+=50px", "+=0px"]],
                   [[".polymerase", "+=50px", "+=0px"]],
                   [["#r12", "+=0px", "-=400px"]],
                   [[".polymerase", "+=0px", "+=0px", "hide"], [".antisense", "+=0px", "+=0px", "hide"], [".sense", "+=0px", "+=0px", "hide"]],
-                  [[".polymerase", "+=0px", "+=0px", "hide"], [".antisense", "+=0px", "+=0px", "hide"], [".sense", "+=0px", "+=0px", "hide"], [".nucleos", "+=0", "+=0", "unhide"]],
-                  [["#r1","+=1500px", "+=0px"], ["#r2","+=1500px", "+=0px"], ["#r3","+=1500px", "+=0px"], ["#r4","+=1000px", "+=0px"], ["#r5","+=1000px", "+=0px"], ["#r6","+=1000px", "+=0px"], ["#r7","+=1000px", "+=0px"], ["#r8","+=1000px", "+=0px"], ["#r9","+=1000px", "+=0px"], ["#r10","+=1000px", "+=0px"], ["#r11","+=1000px", "+=0px"], ["#r12","+=1000px", "+=0px"]],
-                  [[".nucleos", "+=0", "+=0", "hide"], [".aminoacids", "+=0", "+=0", "hide"]],
-                  [["#r1","-=1700px", "+=0px"], ["#r2","-=1700px", "+=0px"], ["#r3","-=1700px", "+=0px"], ["#r4","-=1700px", "+=0px"], ["#r5","-=1000px", "+=0px"], ["#r6","-=1200px", "+=0px"], ["#r7","-=1200px", "+=0px"], ["#r8","-=1200px", "+=0px"], ["#r9","-=1200px", "+=0px"], ["#r10","-=1000px", "+=0px"], ["#r11","-=1200px", "+=0px"], ["#r12","-=1200px", "+=0px"]],
-                  [[".aminoacids", "+=0", "+=0", "unhide"]],
-                  [[".largesubunit", "+=0", "+=0", "unhide"], [".smallsubunit", "+=0", "+=0", "unhide"]]];
+                  [
+                      [".polymerase", "+=0px", "+=0px", "hide"], [".antisense", "+=0px", "+=0px", "hide"], [".sense", "+=0px", "+=0px", "hide"],
+                      [".nucleos", "+=0", "+=0", "unhide"]
+                  ],
+                  [["#nucleicwallbottom", "-=100", "+=0"], ["#nucleicwalltop", "-=100", "+=0"]],
+                  [["#nucleicwallbottom", "-=100", "+=0"], ["#nucleicwalltop", "-=100", "+=0"]],
+                  [["#nucleicwallbottom", "-=100", "+=0"], ["#nucleicwalltop", "-=100", "+=0"]],
+                  [["#nucleicwallbottom", "-=100", "+=0"], ["#nucleicwalltop", "-=100", "+=0"]],
+                  [["#nucleicwallbottom", "-=100", "+=0"], ["#nucleicwalltop", "-=100", "+=0"]],
+                  [["#nucleicwallbottom", "-=100", "+=0"], ["#nucleicwalltop", "-=100", "+=0"]],
+                  [["#nucleicwallbottom", "-=100", "+=0"], ["#nucleicwalltop", "-=100", "+=0"]],
+                  [["#nucleicwallbottom", "-=100", "+=0"], ["#nucleicwalltop", "-=100", "+=0"]],
+                  [["#nucleicwallbottom", "-=100", "+=0"], ["#nucleicwalltop", "-=100", "+=0"]],
+                  [["#nucleicwallbottom", "-=100", "+=0"], ["#nucleicwalltop", "-=100", "+=0"]],
+                  [["#nucleicwallbottom", "-=100", "+=0"], ["#nucleicwalltop", "-=100", "+=0"]],
+                  [["#nucleicwallbottom", "-=100", "+=0"], ["#nucleicwalltop", "-=100", "+=0"]],
+                  [["#nucleicwallbottom", "-=100", "+=0"], ["#nucleicwalltop", "-=100", "+=0"]],
+                  [["#r1", "+=0px", "-=10px"]],
+                  [["#r2", "+=0px", "-=10px"], ["#r1", "+=0px", "+=110px"]],
+                  [["#r3", "+=0px", "-=10px"], ["#r2", "+=0px", "+=110px"]],
+                  [["#r4", "+=0px", "-=10px"], ["#r3", "+=0px", "+=110px"]],
+                  [["#r5", "+=0px", "-=10px"], ["#r4", "+=0px", "+=110px"]],
+                  [["#r6", "+=0px", "-=10px"], ["#r5", "+=0px", "+=110px"]],
+                  [["#r7", "+=0px", "-=10px"], ["#r6", "+=0px", "+=110px"]],
+                  [["#r8", "+=0px", "-=10px"], ["#r7", "+=0px", "+=110px"]],
+                  [["#r9", "+=0px", "-=10px"], ["#r8", "+=0px", "+=110px"]],
+                  [["#r10", "+=0px", "-=10px"], ["#r9", "+=0px", "+=110px"]],
+                  [["#r11", "+=0px", "-=10px"], ["#r10", "+=0px", "+=110px"]],
+                  [["#r12", "+=0px", "-=10px"], ["#r11", "+=0px", "+=110px"]],
+                  [["#r12", "+=0px", "+=110px"]],
+                  [[".ribosome", "+=0", "+=0", "unhide"]],
+                  [".largesubunit", "+=0", "+=10"]];
         
 
-function arrayAnimate(animations) {
+function arrayAnimate(animations) 
+{
     var step, short = animations, n;
 
-    if (animations.length !== 0) {
+    if (animations.length !== 0) 
+    {
         step = animations.shift();
-        for (n = 0; n < step.length; n += 1) {
-                if (n === step.length - 1) {
-                    if (step[n][3] === "hide"){
-                        $(step[n][0]).hide("fast");
+        console.log(step);
+        console.log(step.length);
+        for (n = 0; n < step.length; n += 1) 
+        {
+            if (n === step.length - 1) 
+            {
+                if (step[n][3] === "hide")
+                {
+                    $(step[n][0]).hide("fast");
+                    arrayAnimate(animations);
+                } else if(step[n][3] === "unhide") 
+                {
+                    $(step[n][0]).show("fast");
+                    arrayAnimate(animations);
+                } else 
+                {
+                    $(step[n][0]).animate( {top: step[n][2], left: step[n][1]}, "fast", function() 
+                    {
+                        setTimeout(1);
                         arrayAnimate(animations);
-                    } else if(step[n][3] === "unhide") {
-                        $(step[n][0]).show("fast");
-                        arrayAnimate(animations);
-                    } else {
-                        $(step[n][0]).animate( {top: step[n][2], left: step[n][1]}, "fast", function() {
-                            setTimeout(1);
-                            arrayAnimate(animations);
-                        });
-                    }
-                } else {
-                    if (step[n][3] === "hide"){
-                        $(step[n][0]).hide("fast");
-                    } else if(step[n][3] === "unhide") {
-                        $(step[n][0]).show("fast");
-                    } else {
-                        $(step[n][0]).animate( {top: step[n][2], left: step[n][1]}, "fast", function() {
-                            setTimeout(1);
-                            arrayAnimate(animations);
-                        });
-                    }
+                    });
                 }
-          }
-     }
+            } else 
+            {
+                if (step[n][3] === "hide")
+                {
+                    $(step[n][0]).hide("fast");
+                } else if(step[n][3] === "unhide") 
+                {
+                    $(step[n][0]).show("fast");
+                } else 
+                {
+                    $(step[n][0]).animate({top: step[n][2], left: step[n][1]}, "fast");
+                }
+            }
+        }
+    }
 }
 
 $(document).ready(function () {
