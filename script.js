@@ -162,8 +162,6 @@ function arrayAnimate(animations)
 $(document).ready(function () {
     $(".audio1").trigger("load");
     $("#button").click(function () {
-        $(this).hide();
-        $("#header").hide();
         $("#container").append("<div class=\"sense\"></div>");
         $("#container").append("<div class=\"antisense\"></div>");
         $("#container").append("<div class = \"helicase\">Helicase</div>");
@@ -184,8 +182,8 @@ $(document).ready(function () {
         $("#container").append("<div id = 't3' class = 'tRNA'></div>");
         $("#container").append("<div id = 't4' class = 'tRNA'></div>");
         $("#t1").append("<div id = 'ta1' class = 'tU' style = 'padding-top: 80px;'></div>");
-        $("#t1").append("<div id = 'ta2' class = 'tC' style = 'padding-top: 80px; padding-left: 50;'></div>");
-        $("#t1").append("<div id = 'ta3' class = 'tA'></div>");
+        $("#t1").append("<div id = 'ta2' class = 'tC' style = 'padding-top: 80px; padding-left: 50px;'></div>");
+        $("#t1").append("<div id = 'ta3' class = 'tA' style = 'padding-top: 80px; padding-left: 100px;'></div>");
         $("#t2").append("<div id = 'ta4' class = 'tA'></div>");
         $("#t2").append("<div id = 'ta5' class = 'tU'></div>");
         $("#t2").append("<div id = 'ta6' class = 'tG'></div>");
@@ -195,7 +193,10 @@ $(document).ready(function () {
         $("#t4").append("<div id = 'ta10' class = 'tA'></div>");
         $("#t4").append("<div id = 'ta11' class = 'tC'></div>");
         $("#t4").append("<div id = 'ta12' class = 'tU'></div>");
-        
+        $("#t1").append("<div id = 'p1' class = 'tpadding'></div>");
+        $("#t2").append("<div id = 'p2' class = 'tpadding'></div>");
+        $("#t3").append("<div id = 'p3' class = 'tpadding'></div>");
+        $("#t4").append("<div id = 'p4' class = 'tpadding'></div>");
         $(".nucleos").hide();
         $(".ribosome").hide();
         
@@ -253,6 +254,8 @@ $(document).ready(function () {
         }
         
         $(".aminoacids").hide();
+        $(this).fadeOut();
+        $("#header").fadeOut();
         arrayAnimate(animations);
         $(".audio1").trigger('play');
     });
