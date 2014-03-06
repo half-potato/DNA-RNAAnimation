@@ -162,14 +162,12 @@ function arrayAnimate(animations)
 $(document).ready(function () {
     $(".audio1").trigger("load");
     $("#button").click(function () {
-<<<<<<< HEAD:script.js
-=======
+
         //hide playbutton and title
         $(this).hide();
         $("#header").hide();
     //spawn in all resources
         //spawn in large groups
->>>>>>> 8d45b511cb2bf68285a50ac30d14f066ce677d66:scripts/script.js
         $("#container").append("<div class=\"sense\"></div>");
         $("#container").append("<div class=\"antisense\"></div>");
         $("#container").append("<div class = \"helicase\">Helicase</div>");
@@ -205,14 +203,11 @@ $(document).ready(function () {
         $("#t4").append("<div id = 'ta10' class = 'tA'></div>");
         $("#t4").append("<div id = 'ta11' class = 'tC'></div>");
         $("#t4").append("<div id = 'ta12' class = 'tU'></div>");
-<<<<<<< HEAD:script.js
         $("#t1").append("<div id = 'p1' class = 'tpadding'></div>");
         $("#t2").append("<div id = 'p2' class = 'tpadding'></div>");
         $("#t3").append("<div id = 'p3' class = 'tpadding'></div>");
         $("#t4").append("<div id = 'p4' class = 'tpadding'></div>");
-=======
         //hide non needed resources
->>>>>>> 8d45b511cb2bf68285a50ac30d14f066ce677d66:scripts/script.js
         $(".nucleos").hide();
         $(".ribosome").hide();
         
