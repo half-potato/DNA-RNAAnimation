@@ -162,8 +162,11 @@ function arrayAnimate(animations)
 $(document).ready(function () {
     $(".audio1").trigger("load");
     $("#button").click(function () {
+        //hide playbutton and title
         $(this).hide();
         $("#header").hide();
+    //spawn in all resources
+        //spawn in large groups
         $("#container").append("<div class=\"sense\"></div>");
         $("#container").append("<div class=\"antisense\"></div>");
         $("#container").append("<div class = \"helicase\">Helicase</div>");
@@ -172,17 +175,21 @@ $(document).ready(function () {
         $("#container").append("<div class = \"nucleos\"></div>");
         $("#container").append("<div class = \"ribosome\"></div>");
         $(".ribosome").append("<div class = \"largesubunit\"></div>");
+        //ribosme structure
         $(".largesubunit").append("<div id = 'Asite'>A</div>");
         $(".largesubunit").append("<div id = 'Psite'>P</div>");
         $(".largesubunit").append("<div id = 'Esite'>E</div>");
         $(".largesubunit").append("<div id = 'padding'></div>");
         $(".ribosome").append("<div class = \"smallsubunit\"></div>");
+        //nucliec wall
         $(".nucleos").append("<div id=\"nucleicwalltop\"></div>");
         $(".nucleos").append("<div id=\"nucleicwallbottom\"></div>");
+        //tRNA
         $("#container").append("<div id = 't1' class = 'tRNA'></div>");
         $("#container").append("<div id = 't2' class = 'tRNA'></div>");
         $("#container").append("<div id = 't3' class = 'tRNA'></div>");
         $("#container").append("<div id = 't4' class = 'tRNA'></div>");
+        //rRNA nucleotides
         $("#t1").append("<div id = 'ta1' class = 'tU' style = 'padding-top: 80px;'></div>");
         $("#t1").append("<div id = 'ta2' class = 'tC' style = 'padding-top: 80px; padding-left: 50;'></div>");
         $("#t1").append("<div id = 'ta3' class = 'tA'></div>");
@@ -195,11 +202,11 @@ $(document).ready(function () {
         $("#t4").append("<div id = 'ta10' class = 'tA'></div>");
         $("#t4").append("<div id = 'ta11' class = 'tC'></div>");
         $("#t4").append("<div id = 'ta12' class = 'tU'></div>");
-        
+        //hide non needed resources
         $(".nucleos").hide();
         $(".ribosome").hide();
         
-        
+        //dynamically create
         for (var i = 0; i < sense.length; i++) {
             switch(sense[i].n) {
                 case "A":
