@@ -162,6 +162,14 @@ function arrayAnimate(animations)
 $(document).ready(function () {
     $(".audio1").trigger("load");
     $("#button").click(function () {
+<<<<<<< HEAD:script.js
+=======
+        //hide playbutton and title
+        $(this).hide();
+        $("#header").hide();
+    //spawn in all resources
+        //spawn in large groups
+>>>>>>> 8d45b511cb2bf68285a50ac30d14f066ce677d66:scripts/script.js
         $("#container").append("<div class=\"sense\"></div>");
         $("#container").append("<div class=\"antisense\"></div>");
         $("#container").append("<div class = \"helicase\">Helicase</div>");
@@ -170,17 +178,21 @@ $(document).ready(function () {
         $("#container").append("<div class = \"nucleos\"></div>");
         $("#container").append("<div class = \"ribosome\"></div>");
         $(".ribosome").append("<div class = \"largesubunit\"></div>");
+        //ribosme structure
         $(".largesubunit").append("<div id = 'Asite'>A</div>");
         $(".largesubunit").append("<div id = 'Psite'>P</div>");
         $(".largesubunit").append("<div id = 'Esite'>E</div>");
         $(".largesubunit").append("<div id = 'padding'></div>");
         $(".ribosome").append("<div class = \"smallsubunit\"></div>");
+        //nucliec wall
         $(".nucleos").append("<div id=\"nucleicwalltop\"></div>");
         $(".nucleos").append("<div id=\"nucleicwallbottom\"></div>");
+        //tRNA
         $("#container").append("<div id = 't1' class = 'tRNA'></div>");
         $("#container").append("<div id = 't2' class = 'tRNA'></div>");
         $("#container").append("<div id = 't3' class = 'tRNA'></div>");
         $("#container").append("<div id = 't4' class = 'tRNA'></div>");
+        //rRNA nucleotides
         $("#t1").append("<div id = 'ta1' class = 'tU' style = 'padding-top: 80px;'></div>");
         $("#t1").append("<div id = 'ta2' class = 'tC' style = 'padding-top: 80px; padding-left: 50px;'></div>");
         $("#t1").append("<div id = 'ta3' class = 'tA' style = 'padding-top: 80px; padding-left: 100px;'></div>");
@@ -193,14 +205,18 @@ $(document).ready(function () {
         $("#t4").append("<div id = 'ta10' class = 'tA'></div>");
         $("#t4").append("<div id = 'ta11' class = 'tC'></div>");
         $("#t4").append("<div id = 'ta12' class = 'tU'></div>");
+<<<<<<< HEAD:script.js
         $("#t1").append("<div id = 'p1' class = 'tpadding'></div>");
         $("#t2").append("<div id = 'p2' class = 'tpadding'></div>");
         $("#t3").append("<div id = 'p3' class = 'tpadding'></div>");
         $("#t4").append("<div id = 'p4' class = 'tpadding'></div>");
+=======
+        //hide non needed resources
+>>>>>>> 8d45b511cb2bf68285a50ac30d14f066ce677d66:scripts/script.js
         $(".nucleos").hide();
         $(".ribosome").hide();
         
-        
+        //dynamically create
         for (var i = 0; i < sense.length; i++) {
             switch(sense[i].n) {
                 case "A":
