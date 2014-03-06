@@ -107,10 +107,9 @@ var animations = [[[".helicase", "+=50px", "+=0px"]],
                   [[".smallsubunit", "+=0px", "+=310px"], [".largesubunit", "+=0px", "+=90px"]],
                   [[".smallsubunit", "+=125px", "+=0px"], [".largesubunit", "+=125px", "+=0px"]],
                   [[".smallsubunit", "+=0px", "-=10px"], [".largesubunit", "+=0px", "+=10px"]],
-                  [["#r1", "-=150px", "-=0px"], ["#r2", "-=150px", "-=0px"], ["#r3", "-=150px", "-=0px"]],
-                  [["#r4", "-=150px", "-=0px"], ["#r5", "-=150px", "-=0px"], ["#r6", "-=150px", "-=0px"]],
-                  [["#r7", "-=150px", "-=0px"], ["#r8", "-=150px", "-=0px"], ["#r9", "-=150px", "-=0px"]],
-                  [["#r10", "-=150px", "-=0px"], ["#r11", "-=150px", "-=0px"], ["#r12", "-=150px", "-=0px"]],
+                  [["#r1", "-=150px", "-=0px"], ["#r2", "-=150px", "-=0px"], ["#r3", "-=150px", "-=0px"], ["#r4", "-=150px", "-=0px"], ["#r5", "-=150px", "-=0px"], ["#r6", "-=150px", "-=0px"], ["#r7", "-=150px", "-=0px"], ["#r8", "-=150px", "-=0px"], ["#r9", "-=150px", "-=0px"], ["#r10", "-=150px", "-=0px"], ["#r11", "-=150px", "-=0px"], ["#r12", "-=150px", "-=0px"]],
+                  [["#r1", "-=150px", "-=0px"], ["#r2", "-=150px", "-=0px"], ["#r3", "-=150px", "-=0px"], ["#r4", "-=150px", "-=0px"], ["#r5", "-=150px", "-=0px"], ["#r6", "-=150px", "-=0px"], ["#r7", "-=150px", "-=0px"], ["#r8", "-=150px", "-=0px"], ["#r9", "-=150px", "-=0px"], ["#r10", "-=150px", "-=0px"], ["#r11", "-=150px", "-=0px"], ["#r12", "-=150px", "-=0px"]],
+                  [["#r1", "-=150px", "-=0px"], ["#r2", "-=150px", "-=0px"], ["#r3", "-=150px", "-=0px"], ["#r4", "-=150px", "-=0px"], ["#r5", "-=150px", "-=0px"], ["#r6", "-=150px", "-=0px"], ["#r7", "-=150px", "-=0px"], ["#r8", "-=150px", "-=0px"], ["#r9", "-=150px", "-=0px"], ["#r10", "-=150px", "-=0px"], ["#r11", "-=150px", "-=0px"], ["#r12", "-=150px", "-=0px"]],
                   [".ribosome", "+=0", "+=0", "hide"], [".aminoacids", "+=0", "+=0", "hide"]];
         
 
@@ -178,6 +177,23 @@ $(document).ready(function () {
         $(".ribosome").append("<div class = \"smallsubunit\"></div>");
         $(".nucleos").append("<div id=\"nucleicwalltop\"></div>");
         $(".nucleos").append("<div id=\"nucleicwallbottom\"></div>");
+        $("#container").append("<div id = 't1' class = 'tRNA'></div>");
+        $("#container").append("<div id = 't2' class = 'tRNA'></div>");
+        $("#container").append("<div id = 't3' class = 'tRNA'></div>");
+        $("#container").append("<div id = 't4' class = 'tRNA'></div>");
+        $("#t1").append("<div id = 'ta1' class = 'tU' style = 'padding-top: 80px;'></div>");
+        $("#t1").append("<div id = 'ta2' class = 'tC' style = 'padding-top: 80px; padding-left: 50;'></div>");
+        $("#t1").append("<div id = 'ta3' class = 'tA'></div>");
+        $("#t2").append("<div id = 'ta4' class = 'tA'></div>");
+        $("#t2").append("<div id = 'ta5' class = 'tU'></div>");
+        $("#t2").append("<div id = 'ta6' class = 'tG'></div>");
+        $("#t3").append("<div id = 'ta7' class = 'tC'></div>");
+        $("#t3").append("<div id = 'ta8' class = 'tU'></div>");
+        $("#t3").append("<div id = 'ta9' class = 'tU'></div>");
+        $("#t4").append("<div id = 'ta10' class = 'tA'></div>");
+        $("#t4").append("<div id = 'ta11' class = 'tC'></div>");
+        $("#t4").append("<div id = 'ta12' class = 'tU'></div>");
+        
         $(".nucleos").hide();
         $(".ribosome").hide();
         

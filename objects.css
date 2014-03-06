@@ -71,8 +71,36 @@
     background: purple;
 }
 .tRNA {
-    width:50px;
+    text-align: center;
+    vertical-align: middle;
+    background-color: lightyellow;
+    width:150px;
     height: 90px;
+    position: fixed;
+}
+.tU {
+    position: fixed;
+    height: 10px;
+    width: 50px;
+    background-color: purple;
+}
+.tC {
+    position: fixed;
+    height: 10px;
+    width: 50px;
+    background-color: lightgreen;
+}
+.tG {
+    position: fixed;
+    height: 10px;
+    width: 50px;
+    background-color: darkorange;
+}
+.tA {
+    position: fixed;
+    height: 10px;
+    width: 50px;
+    background-color: lightblue;
 }
 .AminoAcids{
     height: 10px;
@@ -118,24 +146,30 @@
     position: fixed;
     width: 150px;
     padding-left: 325px;
+    padding-top: 25px;
     height: 75px;
     text-align: center;
     font-family: sans-serif;
+    vertical-align: middle;
     background-color: crimson;
 }
 #Psite{
     position: fixed;
     width: 150px;
     padding-left: 175px;
+    padding-top: 25px;
     height: 75px;
     text-align: center;
     font-family: sans-serif;
+    vertical-align: middle;
     background-color: lightblue;
 }
 #Esite{
     position: fixed;
     width: 150px;
+    padding-top: 25px;
     padding-left: 25px;
+    vertical-align: middle;
     height: 75px;
     text-align: center;
     font-family: sans-serif;
@@ -144,7 +178,7 @@
 #padding {
     position: fixed;
     width: 25px;
-    height: 75px;
+    height: 100px;
     background-color: brown;
 }
 .smallsubunit{
