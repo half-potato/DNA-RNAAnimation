@@ -206,7 +206,7 @@ $(document).ready(function () {
         $(".nucleos").hide();
         $(".ribosome").hide();
         
-        //dynamically create
+        //dynamically create DNA strands
         for (var i = 0; i < sense.length; i++) {
             switch(sense[i].n) {
                 case "A":
@@ -258,7 +258,7 @@ $(document).ready(function () {
                     break;
             }
         }
-        
+        //more of the same
         $(".aminoacids").hide();
         arrayAnimate(animations);
         $(".audio1").trigger('play');
