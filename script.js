@@ -162,6 +162,8 @@ function arrayAnimate(animations)
 $(document).ready(function () {
     $(".audio1").trigger("load");
     $("#button").click(function () {
+        $(this).hide();
+        $("#header").hide();
         $("#container").append("<div class=\"sense\"></div>");
         $("#container").append("<div class=\"antisense\"></div>");
         $("#container").append("<div class = \"helicase\">Helicase</div>");
@@ -251,8 +253,6 @@ $(document).ready(function () {
         }
         
         $(".aminoacids").hide();
-        $(this).fadeOut();
-        $("#header").fadeOut();
         arrayAnimate(animations);
         $(".audio1").trigger('play');
     });
