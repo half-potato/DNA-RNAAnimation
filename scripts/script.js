@@ -157,10 +157,9 @@ function arrayAnimate(animations)
                 if (step[n][3] === "hide")
                 {
                     $(step[n][0]).hide("fast");
-                } else if(step[n][3] === "unhide");
-                {
+                }else if(step[n][3] === "unhide"){
                     $(step[n][0]).show("fast");
-                } else if(step[n][4] === "play"){
+                }else if(step[n][4] === "play"){
                     step[n][0].trigger(play);
                 } else {
                     $(step[n][0]).animate({top: step[n][2], left: step[n][1]}, "fast");
@@ -263,6 +262,5 @@ $(document).ready(function () {
         $(this).fadeOut();
         $("#header").fadeOut();
         arrayAnimate(animations);
-        $(".audio1").trigger('play');
     });
 });
