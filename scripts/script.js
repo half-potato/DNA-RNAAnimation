@@ -107,9 +107,19 @@ var animations = [[[".helicase", "+=50px", "+=0px"]],
                   [[".smallsubunit", "+=0px", "+=310px"], [".largesubunit", "+=0px", "+=90px"]],
                   [[".smallsubunit", "+=125px", "+=0px"], [".largesubunit", "+=125px", "+=0px"]],
                   [[".smallsubunit", "+=0px", "-=10px"], [".largesubunit", "+=0px", "+=10px"]],
-                  [["#r1", "-=150px", "-=0px"], ["#r2", "-=150px", "-=0px"], ["#r3", "-=150px", "-=0px"], ["#r4", "-=150px", "-=0px"], ["#r5", "-=150px", "-=0px"], ["#r6", "-=150px", "-=0px"], ["#r7", "-=150px", "-=0px"], ["#r8", "-=150px", "-=0px"], ["#r9", "-=150px", "-=0px"], ["#r10", "-=150px", "-=0px"], ["#r11", "-=150px", "-=0px"], ["#r12", "-=150px", "-=0px"]],
-                  [["#r1", "-=150px", "-=0px"], ["#r2", "-=150px", "-=0px"], ["#r3", "-=150px", "-=0px"], ["#r4", "-=150px", "-=0px"], ["#r5", "-=150px", "-=0px"], ["#r6", "-=150px", "-=0px"], ["#r7", "-=150px", "-=0px"], ["#r8", "-=150px", "-=0px"], ["#r9", "-=150px", "-=0px"], ["#r10", "-=150px", "-=0px"], ["#r11", "-=150px", "-=0px"], ["#r12", "-=150px", "-=0px"]],
-                  [["#r1", "-=150px", "-=0px"], ["#r2", "-=150px", "-=0px"], ["#r3", "-=150px", "-=0px"], ["#r4", "-=150px", "-=0px"], ["#r5", "-=150px", "-=0px"], ["#r6", "-=150px", "-=0px"], ["#r7", "-=150px", "-=0px"], ["#r8", "-=150px", "-=0px"], ["#r9", "-=150px", "-=0px"], ["#r10", "-=150px", "-=0px"], ["#r11", "-=150px", "-=0px"], ["#r12", "-=150px", "-=0px"]],
+                  [["#t1", "+300px", "+20px"], ["#t2", "+450px", "+20px"], ["#t3", "+450px", "+20px"]],
+                  [["#t1", "+=0px", "+=0px", "unhide"]],
+                  [["#t1", "+=0px", "+=90"]],
+                  [["#t2", "+=0px", "+=0px", "unhide"]],
+                  [["#t2", "+=0px", "+=90"]],
+                  [["#r1", "-=150px", "-=0px"], ["#r2", "-=150px", "-=0px"], ["#r3", "-=150px", "-=0px"], ["#r4", "-=150px", "-=0px"], ["#r5", "-=150px", "-=0px"], ["#r6", "-=150px", "-=0px"], ["#r7", "-=150px", "-=0px"], ["#r8", "-=150px", "-=0px"], ["#r9", "-=150px", "-=0px"], ["#r10", "-=150px", "-=0px"], ["#r11", "-=150px", "-=0px"], ["#r12", "-=150px", "-=0px"], ["#t1", "-=150px", "+=0"], ["#t2", "-=150px", "+=0"]],
+                  [["#t1", "+=0px", "+=0px", "hide"]],
+                  [["#t3", "+=0px", "+=0px", "unhide"]],
+                  [["#t3", "+=0px", "+=90"]],
+                  [["#r1", "-=150px", "-=0px"], ["#r2", "-=150px", "-=0px"], ["#r3", "-=150px", "-=0px"], ["#r4", "-=150px", "-=0px"], ["#r5", "-=150px", "-=0px"], ["#r6", "-=150px", "-=0px"], ["#r7", "-=150px", "-=0px"], ["#r8", "-=150px", "-=0px"], ["#r9", "-=150px", "-=0px"], ["#r10", "-=150px", "-=0px"], ["#r11", "-=150px", "-=0px"], ["#r12", "-=150px", "-=0px"], ["#t2", "-=150px", "+=0"], ["#t3", "-=150px", "+=0"]],
+                  [["#t2", "+=0px", "+=0px", "hide"]],
+                  [["#t3", "+=0px", "+=0px", "hide"]],
+                  [[".largesubunit", "+=0px", "-=500px"], [".smallsubunit", "+=0px", "+=500px"]],
                   ];
         
 
@@ -186,28 +196,12 @@ $(document).ready(function () {
         $(".nucleos").append("<div id=\"nucleicwalltop\"></div>");
         $(".nucleos").append("<div id=\"nucleicwallbottom\"></div>");
         //tRNA
-        $("#container").append("<div id = 't1' class = 'tRNA'></div>");
-        /*$("#container").append("<div id = 't2' class = 'tRNA'></div>");
-        $("#container").append("<div id = 't3' class = 'tRNA'></div>");
-        $("#container").append("<div id = 't4' class = 'tRNA'></div>");*/
-        //rRNA nucleotides
-        $("#t1").append("<div id = 'ta1' class = 'tU' style = 'padding-top: 60px;'>A</div>");
-        $("#t1").append("<div id = 'ta2' class = 'tC' style = 'padding-top: 60px; margin-left: 50px;'>A</div>");
-        $("#t1").append("<div id = 'ta3' class = 'tA' style = 'padding-top: 60px; margin-left: 100px;'>A</div>");
-//        $("#t2").append("<div id = 'ta4' class = 'tA'></div>");
-//        $("#t2").append("<div id = 'ta5' class = 'tU'></div>");
-//        $("#t2").append("<div id = 'ta6' class = 'tG'></div>");
-//        $("#t3").append("<div id = 'ta7' class = 'tC'></div>");
-//        $("#t3").append("<div id = 'ta8' class = 'tU'></div>");
-//        $("#t3").append("<div id = 'ta9' class = 'tU'></div>");
-//        $("#t4").append("<div id = 'ta10' class = 'tA'></div>");
-//        $("#t4").append("<div id = 'ta11' class = 'tC'></div>");
-//        $("#t4").append("<div id = 'ta12' class = 'tU'></div>");
-//        $("#t1").append("<div id = 'p1' class = 'tpadding'></div>");
-//        $("#t2").append("<div id = 'p2' class = 'tpadding'></div>");
-//        $("#t3").append("<div id = 'p3' class = 'tpadding'></div>");
-//        $("#t4").append("<div id = 'p4' class = 'tpadding'></div>");
-        //hide non needed resources
+        $("#container").append("<img id = 't1' class = 'tRNA' src = 'media/t1.png'> </img>");
+        $("#container").append("<img id = 't2' class = 'tRNA' src = 'media/t2.png'> </img>");
+        $("#container").append("<img id = 't3' class = 'tRNA' src = 'media/t3.png'> </img>");
+        $("#t1").hide();
+        $("#t2").hide();
+        $("#t3").hide();
         $(".nucleos").hide();
         $(".ribosome").hide();
         

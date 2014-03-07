@@ -70,41 +70,11 @@
     background: purple;
 }
 .tRNA {
-    text-align: center;
-    vertical-align: middle;
+    max-height: 90px;
+    max-width: 150px;
     width:150px;
     height: 90px;
     position: fixed;
-    font-family: sans-serif;
-    font-size: 32px;
-}
-.tU {
-    position: fixed;
-    height: 10px;
-    width: 50px;
-    background-color: purple;
-    z-index: 10;
-}
-.tC {
-    position: fixed;
-    height: 10px;
-    width: 50px;
-    background-color: lightgreen;
-    z-index: 10;
-}
-.tG {
-    position: fixed;
-    height: 10px;
-    width: 50px;
-    background-color: darkorange;
-    z-index: 10;
-}
-.tA {
-    position: fixed;
-    height: 10px;
-    width: 50px;
-    background-color: lightblue;
-    z-index: 10;
 }
 .AminoAcids{
     height: 10px;
