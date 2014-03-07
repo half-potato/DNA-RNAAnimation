@@ -144,8 +144,8 @@ function arrayAnimate(animations)
                 {
                     $(step[n][0]).show("fast");
                     arrayAnimate(animations);
-                } else if(step[n][4] === "play"){
-                    step[n][0].Play;
+                } else if(step[n][3] === "play"){
+                    $(step[n][0]).trigger("play");
                     arrayAnimate(animations)
                 }else {
                     $(step[n][0]).animate( {top: step[n][2], left: step[n][1]}, "fast", function() 
@@ -161,6 +161,8 @@ function arrayAnimate(animations)
                     $(step[n][0]).hide("fast");
                 }else if(step[n][3] === "unhide"){
                     $(step[n][0]).show("fast");
+                } else if(step[n][3] === "play"){
+                    $(step[n][0]).trigger("play");
                 } else {
                     $(step[n][0]).animate({top: step[n][2], left: step[n][1]}, "fast");
                 }
