@@ -1,6 +1,6 @@
 var sense = [{n: "G"}, {n: "C"}, {n: "T"}, {n: "A"}, {n: "G"}, {n: "T"}, {n: "T"},{n: "A"},{n: "C"},{n: "G"},{n: "A"},{n: "A"},{n: "T"},{n: "G"},{n: "A"},{n: "A"},{n: "C"},{n: "T"},{n: "C"},{n: "G"},{n: "C"},{n: "A"},{n: "G"},{n: "T"}];
 
-var animations = [[[".helicase", "+=50px", "+=0px"]],
+var animations = [[[".helicase", "+=50px", "+=0px"],[".audio1", "+=0px", "+=0px", "play"]],
                   [["#1", "+=0px", "-=15px"], ["#a1", "+=0px", "+=15px"]],
                   [[".helicase", "+=50px", "+=0px"]],
                   [["#2", "+=0px", "-=30px"], ["#a2", "+=0px", "+=30px"]],
@@ -46,7 +46,7 @@ var animations = [[[".helicase", "+=50px", "+=0px"]],
                   [["#22", "+=0px", "-=15px"], ["#a22", "+=0px", "+=15px"]],
                   [[".helicase", "+=50px", "+=0px"]],
                   [["#23", "+=0px", "-=0px"], ["#a23", "+=0px", "+=0px"]],
-                  [[".helicase", "+=0", "+=0", "hide"], [".polymerase", "+=315px", "+=0px"]], 
+                  [[".helicase", "+=0", "+=0", "hide"], [".polymerase", "+=315px", "+=0px"], [".audio2", "+=0px", "+=0px", "play"]], 
                   [[".polymerase", "+=0", "+=0", "unhide"], [".aminoacids", "+=0", "+=0", "unhide"]],
                   [[".polymerase", "+=50px", "+=0px"]],
                   [["#r1", "+=0px", "-=400px"]],
@@ -75,7 +75,7 @@ var animations = [[[".helicase", "+=50px", "+=0px"]],
                   [[".polymerase", "+=0px", "+=0px", "hide"], [".antisense", "+=0px", "+=0px", "hide"], [".sense", "+=0px", "+=0px", "hide"]],
                   [
                       [".polymerase", "+=0px", "+=0px", "hide"], [".antisense", "+=0px", "+=0px", "hide"], [".sense", "+=0px", "+=0px", "hide"],
-                      [".nucleos", "+=0", "+=0", "unhide"]
+                      [".nucleos", "+=0", "+=0", "unhide"], [".audio3", "+=0px", "+=0px", "play"]
                   ],
                   [["#nucleicwallbottom", "-=100", "+=0"], ["#nucleicwalltop", "-=100", "+=0"]],
                   [["#nucleicwallbottom", "-=100", "+=0"], ["#nucleicwalltop", "-=100", "+=0"]],
@@ -90,7 +90,7 @@ var animations = [[[".helicase", "+=50px", "+=0px"]],
                   [["#nucleicwallbottom", "-=100", "+=0"], ["#nucleicwalltop", "-=100", "+=0"]],
                   [["#nucleicwallbottom", "-=100", "+=0"], ["#nucleicwalltop", "-=100", "+=0"]],
                   [["#nucleicwallbottom", "-=100", "+=0"], ["#nucleicwalltop", "-=100", "+=0"]],
-                  [["#r1", "+=0px", "-=10px"]],
+                  [["#r1", "+=0px", "-=10px"], [".audio4", "+=0px","+=0px", "play" ]],
                   [["#r2", "+=0px", "-=10px"], ["#r1", "+=0px", "+=110px"]],
                   [["#r3", "+=0px", "-=10px"], ["#r2", "+=0px", "+=110px"]],
                   [["#r4", "+=0px", "-=10px"], ["#r3", "+=0px", "+=110px"]],
@@ -144,8 +144,10 @@ function arrayAnimate(animations)
                 {
                     $(step[n][0]).show("fast");
                     arrayAnimate(animations);
-                } else 
-                {
+                } else if(step[n][4] === "play"){
+                    step[n][0].Play;
+                    arrayAnimate(animations)
+                }else {
                     $(step[n][0]).animate( {top: step[n][2], left: step[n][1]}, "fast", function() 
                     {
                         setTimeout(1);
@@ -159,8 +161,6 @@ function arrayAnimate(animations)
                     $(step[n][0]).hide("fast");
                 }else if(step[n][3] === "unhide"){
                     $(step[n][0]).show("fast");
-                }else if(step[n][4] === "play"){
-                    step[n][0].trigger(play);
                 } else {
                     $(step[n][0]).animate({top: step[n][2], left: step[n][1]}, "fast");
                 }
