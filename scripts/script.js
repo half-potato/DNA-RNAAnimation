@@ -173,6 +173,14 @@ function arrayAnimate(animations)
 
 $(document).ready(function () {
     $(".audio1").trigger("load");
+    $(".audio2").trigger("load");
+    $(".audio3").trigger("load");
+    $(".audio4").trigger("load");
+    $(".audio5").trigger("load");
+    $(".audio6").trigger("load");
+    $(".audio7").trigger("load");
+    $(".audio8").trigger("load");
+    $(".audio9").trigger("load");
     $("#button").click(function () {
 
         //hide playbutton and title
