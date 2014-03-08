@@ -17,8 +17,8 @@
 }
 .bond {
     position: fixed;
-    width: 160;
-    height: 10;
+    width: 160px;
+    height: 10px;
     background-color: gray;
 }
 /*dna nucleotides for stuff*/
